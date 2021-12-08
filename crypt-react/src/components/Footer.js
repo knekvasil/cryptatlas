@@ -35,7 +35,7 @@ function Footer() {
 								</address>
 								<ul className="list-unstyled list-light">
 									<li>
-										<a href="#">Disclaimer</a>
+										<a href="#">Terms of Service</a>
 									</li>
 								</ul>
 							</div>
@@ -126,9 +126,9 @@ function Footer() {
 							<div className="col-md-8 text-xs-center  text-left   my-1">
 								<p className="mt-2  text-muted">
 									{" "}
-									© Copyright 2019 • All Rights Reserved |{" "}
+									© Copyright 2021 • All Rights Reserved |{" "}
 									<a className=" " href="#">
-										Disclaimer
+										Terms of Service
 									</a>{" "}
 									|{" "}
 									<a className=" " href="#">
