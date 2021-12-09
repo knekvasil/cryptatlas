@@ -129,8 +129,6 @@ function About() {
 					</div>
 				</div>
 			</section>
-
-			<Footer />
 		</>
 	);
 }

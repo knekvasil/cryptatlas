@@ -1,1 +1,10 @@
 /* LandingPageView.css */
+
+.feature {
+	display: inline-flex;
+	align-items: center;
+	width: 3rem;
+	height: 3rem;
+	justify-content: center;
+	font-size: 1.5rem;
+}
