@@ -156,7 +156,7 @@ function ContactView() {
 										</li>
 										<li className="mb-2">
 											<i className="bi bi-check text-primary"></i>
-											<strong>Unlimited</strong>
+											<strong>Unlimited </strong>
 											linked domains
 										</li>
 										<li className="text-muted">

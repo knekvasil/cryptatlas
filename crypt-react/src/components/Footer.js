@@ -1,5 +1,7 @@
 // Footer.js
 
+import { Link } from "react-router-dom";
+
 function Footer() {
 	return (
 		<section className="pt-5 pb-5">
@@ -29,27 +31,20 @@ function Footer() {
 									</svg>
 								</a>
 								<address className="color-light-20">
-									1600 Amphitheatre Parkway
+									120 SW 8th St
 									<br />
-									Mountain View, CA 94043
+									Miami, FL 33130
 								</address>
-								<ul className="list-unstyled list-light">
-									<li>
-										<a href="#">Terms of Service</a>
-									</li>
-								</ul>
 							</div>
 
 							<div className="col-xs-6 col-sm-3">
 								<h4 className="my-2">Product</h4>
 								<ul className="list-unstyled list-light text-white">
 									<li>
-										<a className=" " href="#">
-											Pricing
-										</a>
+										<Link to="/pricing">Pricing</Link>
 									</li>
 									<li>
-										<a href="#">Features</a>
+										<Link to="/features">Features</Link>
 									</li>
 								</ul>
 							</div>
@@ -58,13 +53,14 @@ function Footer() {
 								<h4 className="my-2">Company</h4>
 								<ul className="list-unstyled list-light">
 									<li>
-										<a href="#">About Us</a>
+										<Link to="/about">About Us</Link>
+									</li>
+
+									<li>
+										<Link to="/careers">Careers</Link>
 									</li>
 									<li>
-										<a href="#">Careers</a>
-									</li>
-									<li>
-										<a href="#">Contact</a>
+										<Link to="/contact">Contact</Link>
 									</li>
 								</ul>
 							</div>
@@ -92,58 +88,18 @@ function Footer() {
 							<div className="col-md-8 text-xs-center  text-left   my-1">
 								<p className="mt-2  text-muted">
 									{" "}
-									© Copyright 2021 • All Rights Reserved |{" "}
-									<a className=" " href="#">
-										Terms of Service
-									</a>{" "}
-									|{" "}
-									<a className=" " href="#">
-										Contact
-									</a>
+									© Copyright 2021 • All Rights Reserved
 								</p>
 							</div>
 							<div className="col-md-4 text-xs-center   text-lg-right   my-1">
 								<div className="btn-container  mt-1 text-md-right text-sm-center">
 									<div className="mb-1 mr-3 align-self-right pt-0 d-inline-block">
 										<a
-											href="#"
+											href="https://github.com/knekvasil/cryptatlas"
 											role="button"
 											className=" btn-white p-2 m-2 btn btn-round btn-rised btn-icon x"
 										>
-											<i
-												className="fab fa-twitter fa-lg color-light"
-												aria-hidden="true"
-											></i>
-										</a>
-										<a
-											href="#"
-											role="button"
-											className="btn-white p-2 m-2 btn btn-round btn-rised btn-icon "
-										>
-											<i
-												className="fab fa-facebook fa-lg"
-												aria-hidden="true"
-											></i>
-										</a>
-										<a
-											href="#"
-											role="button"
-											className="btn-white p-2 m-2 btn btn-round btn-rised btn-icon  "
-										>
-											<i
-												className="fab fa-linkedin fa-lg"
-												aria-hidden="true"
-											></i>
-										</a>
-										<a
-											href="#"
-											role="button"
-											className="btn-white p-2 m-2 btn btn-rised btn-round btn-icon  "
-										>
-											<i
-												className="fab fa-google-plus fa-lg"
-												aria-hidden="true"
-											></i>
+											<i class="bi bi-github"></i>
 										</a>
 									</div>
 								</div>

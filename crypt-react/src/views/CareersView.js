@@ -31,29 +31,32 @@ function Careers() {
 							>
 								<div className="card-body">
 									<span className="row justify-content-between align-items-center">
-										<span className="col-md-5 color--heading">
-											<span className="badge badge-circle background--danger text-white mr-3">
-												GD
+										<div className="job-flex">
+											<span className="col-md-1 color--heading">
+												<span className="badge badge-circle background--danger text-white mr-3">
+													GD
+												</span>
 											</span>
-										</span>
-										<span className="col-5 col-md-3 my-3 my-sm-0 color--text">
-											<i className="fas fa-clock mr-1"></i> Senior Graphic
-											Designer
-										</span>
-										<span className="col-5 col-md-3 my-3 my-sm-0 color--text">
-											<i className="fas fa-clock mr-1"></i> Full time
-										</span>
 
-										<span className="col-7 col-md-3 my-3 my-sm-0 color--text">
-											<i className="fas fa-map-marker-alt mr-1"></i> San
-											Francisco, US
-										</span>
+											<span className="col-5 col-md-3 my-3 my-sm-0 color--text">
+												<i className="fas fa-clock mr-1"></i> Senior Graphic
+												Designer
+											</span>
+											<span className="col-5 col-md-3 my-3 my-sm-0 color--text">
+												<i className="fas fa-clock mr-1"></i> Full time
+											</span>
 
-										<span className="d-none d-md-block col-1 text-center color--text">
-											<small>
-												<i className="fas fa-chevron-right"></i>
-											</small>
-										</span>
+											<span className="col-7 col-md-3 my-3 my-sm-0 color--text">
+												<i className="fas fa-map-marker-alt mr-1"></i> San
+												Francisco, US
+											</span>
+
+											<span className="d-none d-md-block col-1 text-center color--text">
+												<small>
+													<i class="bi bi-chevron-right"></i>
+												</small>
+											</span>
+										</div>
 									</span>
 								</div>
 							</a>
@@ -64,57 +67,65 @@ function Careers() {
 							>
 								<div className="card-body">
 									<span className="row justify-content-between align-items-center">
-										<span className="col-md-5 color--heading">
-											<span className="badge badge-circle background--tertiary text-white mr-3">
-												UX
-											</span>{" "}
-											UI/UX Designer
-										</span>
+										<div className="job-flex">
+											<span className="col-md-1 color--heading">
+												<span className="badge badge-circle background--tertiary text-white mr-3">
+													UX
+												</span>
+											</span>
 
-										<span className="col-5 col-md-3 my-3 my-sm-0 color--text">
-											<i className="fas fa-clock mr-1"></i> Remote
-										</span>
+											<span className="col-5 col-md-3 my-3 my-sm-0 color--text">
+												<i className="fas fa-clock mr-1"></i> UI/UX Designer
+												Designer
+											</span>
+											<span className="col-5 col-md-3 my-3 my-sm-0 color--text">
+												<i className="fas fa-clock mr-1"></i> Full time
+											</span>
 
-										<span className="col-7 col-md-3 my-3 my-sm-0 color--text">
-											<i className="fas fa-map-marker-alt mr-1"></i> Remote
-										</span>
+											<span className="col-7 col-md-3 my-3 my-sm-0 color--text">
+												<i className="fas fa-map-marker-alt mr-1"></i> Miami, US
+											</span>
 
-										<span className="d-none d-md-block col-1 text-center color--text">
-											<small>
-												<i className="fas fa-chevron-right"></i>
-											</small>
-										</span>
+											<span className="d-none d-md-block col-1 text-center color--text">
+												<small>
+													<i class="bi bi-chevron-right"></i>
+												</small>
+											</span>
+										</div>
 									</span>
 								</div>
 							</a>
-
 							<a
 								href="career-single.html"
 								className="card p-0 mb-3 border-0 shadow-sm shadow--on-hover"
 							>
 								<div className="card-body">
 									<span className="row justify-content-between align-items-center">
-										<span className="col-md-5 color--heading">
-											<span className="badge badge-circle background--warning text-white mr-3">
-												AN
-											</span>{" "}
-											Multimedia Artist &amp; Animator
-										</span>
+										<div className="job-flex">
+											<span className="col-md-1 color--heading">
+												<span className="badge badge-circle background--warning text-white mr-3">
+													AN
+												</span>
+											</span>
 
-										<span className="col-5 col-md-3 my-3 my-sm-0 color--text">
-											<i className="fas fa-clock mr-1"></i> Full time
-										</span>
+											<span className="col-5 col-md-3 my-3 my-sm-0 color--text">
+												<i className="fas fa-clock mr-1"></i> Multimedia Artist
+												& Animator
+											</span>
+											<span className="col-5 col-md-3 my-3 my-sm-0 color--text">
+												<i className="fas fa-clock mr-1"></i> Full time
+											</span>
 
-										<span className="col-7 col-md-3 my-3 my-sm-0 color--text">
-											<i className="fas fa-map-marker-alt mr-1"></i> Birmingham,
-											UK
-										</span>
+											<span className="col-7 col-md-3 my-3 my-sm-0 color--text">
+												<i className="fas fa-map-marker-alt mr-1"></i> Miami, US
+											</span>
 
-										<span className="d-none d-md-block col-1 text-center color--text">
-											<small>
-												<i className="fas fa-chevron-right"></i>
-											</small>
-										</span>
+											<span className="d-none d-md-block col-1 text-center color--text">
+												<small>
+													<i class="bi bi-chevron-right"></i>
+												</small>
+											</span>
+										</div>
 									</span>
 								</div>
 							</a>
@@ -122,95 +133,104 @@ function Careers() {
 
 						<div className="job-list__wrapper mb-6">
 							<h3 className="mb-4">Development</h3>
-
 							<a
 								href="career-single.html"
 								className="card p-0 mb-3 border-0 shadow-sm shadow--on-hover"
 							>
 								<div className="card-body">
 									<span className="row justify-content-between align-items-center">
-										<span className="col-md-5 color--heading">
-											<span className="badge badge-circle background--success text-white mr-3">
-												FE
-											</span>{" "}
-											Front End Developer
-										</span>
+										<div className="job-flex">
+											<span className="col-md-1 color--heading">
+												<span className="badge badge-circle background--warning2 text-white mr-3">
+													MD
+												</span>
+											</span>
 
-										<span className="col-5 col-md-3 my-3 my-sm-0 color--text">
-											<i className="fas fa-clock mr-1"></i> Part time
-										</span>
+											<span className="col-5 col-md-3 my-3 my-sm-0 color--text">
+												<i className="fas fa-clock mr-1"></i> Front End
+												Developer
+											</span>
+											<span className="col-5 col-md-3 my-3 my-sm-0 color--text">
+												<i className="fas fa-clock mr-1"></i> Full time
+											</span>
 
-										<span className="col-7 col-md-3 my-3 my-sm-0 color--text">
-											<i className="fas fa-map-marker-alt mr-1"></i> Sydney, AU
-										</span>
+											<span className="col-7 col-md-3 my-3 my-sm-0 color--text">
+												<i className="fas fa-map-marker-alt mr-1"></i> San
+												Francisco, US
+											</span>
 
-										<span className="d-none d-md-block col-1 text-center color--text">
-											<small>
-												<i className="fas fa-chevron-right"></i>
-											</small>
-										</span>
+											<span className="d-none d-md-block col-1 text-center color--text">
+												<small>
+													<i class="bi bi-chevron-right"></i>
+												</small>
+											</span>
+										</div>
 									</span>
 								</div>
 							</a>
-
 							<a
 								href="career-single.html"
 								className="card p-0 mb-3 border-0 shadow-sm shadow--on-hover"
 							>
 								<div className="card-body">
 									<span className="row justify-content-between align-items-center">
-										<span className="col-md-5 color--heading">
-											<span className="badge badge-circle background--warning2 text-white mr-3">
-												MD
-											</span>{" "}
-											Mobile Developer
-										</span>
+										<div className="job-flex">
+											<span className="col-md-1 color--heading">
+												<span className="badge badge-circle background--success text-white mr-3">
+													FE
+												</span>
+											</span>
 
-										<span className="col-5 col-md-3 my-3 my-sm-0 color--text">
-											<i className="fas fa-clock mr-1"></i> Full-time
-										</span>
+											<span className="col-5 col-md-3 my-3 my-sm-0 color--text">
+												<i className="fas fa-clock mr-1"></i> Mobile Developer
+											</span>
+											<span className="col-5 col-md-3 my-3 my-sm-0 color--text">
+												<i className="fas fa-clock mr-1"></i> Full time
+											</span>
 
-										<span className="col-7 col-md-3 my-3 my-sm-0 color--text">
-											<i className="fas fa-map-marker-alt mr-1"></i> San
-											Fransisco, US
-										</span>
+											<span className="col-7 col-md-3 my-3 my-sm-0 color--text">
+												<i className="fas fa-map-marker-alt mr-1"></i> Miami, US
+											</span>
 
-										<span className="d-none d-md-block col-1 text-center color--text">
-											<small>
-												<i className="fas fa-chevron-right"></i>
-											</small>
-										</span>
+											<span className="d-none d-md-block col-1 text-center color--text">
+												<small>
+													<i class="bi bi-chevron-right"></i>
+												</small>
+											</span>
+										</div>
 									</span>
 								</div>
 							</a>
-
 							<a
 								href="career-single.html"
 								className="card p-0 mb-3 border-0 shadow-sm shadow--on-hover"
 							>
 								<div className="card-body">
 									<span className="row justify-content-between align-items-center">
-										<span className="col-md-5 color--heading">
-											<span className="badge badge-circle background--info text-white mr-3">
-												NT
-											</span>{" "}
-											.NET Developer
-										</span>
+										<div className="job-flex">
+											<span className="col-md-1 color--heading">
+												<span className="badge badge-circle background--info text-white mr-3">
+													NT
+												</span>
+											</span>
 
-										<span className="col-5 col-md-3 my-3 my-sm-0 color--text">
-											<i className="fas fa-clock mr-1"></i> Full time
-										</span>
+											<span className="col-5 col-md-3 my-3 my-sm-0 color--text">
+												<i className="fas fa-clock mr-1"></i> .NET Developer
+											</span>
+											<span className="col-5 col-md-3 my-3 my-sm-0 color--text">
+												<i className="fas fa-clock mr-1"></i> Full time
+											</span>
 
-										<span className="col-7 col-md-3 my-3 my-sm-0 color--text">
-											<i className="fas fa-map-marker-alt mr-1"></i> Manchester,
-											UK
-										</span>
+											<span className="col-7 col-md-3 my-3 my-sm-0 color--text">
+												<i className="fas fa-map-marker-alt mr-1"></i> Remote
+											</span>
 
-										<span className="d-none d-md-block col-1 text-center color--text">
-											<small>
-												<i className="fas fa-chevron-right"></i>
-											</small>
-										</span>
+											<span className="d-none d-md-block col-1 text-center color--text">
+												<small>
+													<i class="bi bi-chevron-right"></i>
+												</small>
+											</span>
+										</div>
 									</span>
 								</div>
 							</a>

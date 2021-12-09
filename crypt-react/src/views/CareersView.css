@@ -98,12 +98,18 @@ a {
 
 .job-flex {
 	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
-/* .job-flex .badge {
-	padding-top: 14px;
+span {
+	display: flex;
+	align-content: center;
+	justify-content: center;
 }
 
-.job-flex p {
-	/* padding-top: px; */
-/* } */
+span .badge {
+	display: flex;
+	align-items: center;
+}

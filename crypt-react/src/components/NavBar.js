@@ -5,7 +5,7 @@ function NavBar() {
 		<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div className="container px-5">
 				<a className="navbar-brand" href="index.html">
-					Start Bootstrap
+					Cryptatlas
 				</a>
 				<button
 					className="navbar-toggler"
