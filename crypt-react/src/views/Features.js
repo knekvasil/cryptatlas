@@ -1,6 +1,6 @@
-// LearnMore.js
+// Features.js
 
-function LearnMore() {
+function Features() {
 	return (
 		<>
 			<header class="py-5">
@@ -115,4 +115,4 @@ function LearnMore() {
 	);
 }
 
-export default LearnMore;
+export default Features;

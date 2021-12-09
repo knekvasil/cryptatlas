@@ -2,12 +2,14 @@ import React from "react";
 import NavBar from "./components/NavBar";
 import LandingPageView from "./views/LandingPageView";
 import AboutView from "./views/AboutView";
-import ContactView from "./views/ContactView";
-import SignupView from "./views/SignupView";
+import PricingView from "./views/PricingView";
+import RegisterView from "./views/RegisterView";
 import { Routes, Route } from "react-router-dom";
 import LoginView from "./views/LoginView";
-import LearnMore from "./views/LearnMore";
+import CareersView from "./views/CareersView";
 import Footer from "./components/Footer";
+import ContactView from "./views/ContactView";
+import Features from "./views/Features";
 
 function App() {
 	return (
@@ -20,10 +22,14 @@ function App() {
 			<Routes>
 				<Route path="/" element={<LandingPageView />}></Route>
 				<Route path="/about" element={<AboutView />}></Route>
-				<Route path="/contact" element={<ContactView />}></Route>
-				<Route path="/learnmore" element={<LearnMore />}></Route>
-				<Route path="/signup" element={<SignupView />}></Route>
+
+				<Route path="/pricing" element={<PricingView />}></Route>
+				<Route path="/features" element={<Features />}></Route>
+				<Route path="/register" element={<RegisterView />}></Route>
 				<Route path="/login" element={<LoginView />}></Route>
+
+				<Route path="/contact" element={<ContactView />}></Route>
+				<Route path="/careers" element={<CareersView />}></Route>
 			</Routes>
 			<Footer />
 		</div>

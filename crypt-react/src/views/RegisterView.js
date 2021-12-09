@@ -2,7 +2,7 @@
 
 import "./AuthForm.css";
 
-function SignupView() {
+function Register() {
 	return (
 		<section
 			className="pt-5 pb-5 mt-0 align-items-center d-flex bg-dark"
@@ -108,4 +108,4 @@ function SignupView() {
 	);
 }
 
-export default SignupView;
+export default Register;

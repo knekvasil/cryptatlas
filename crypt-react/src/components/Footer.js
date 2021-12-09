@@ -51,12 +51,6 @@ function Footer() {
 									<li>
 										<a href="#">Features</a>
 									</li>
-									<li>
-										<a href="#">Customers</a>
-									</li>
-									<li>
-										<a href="#">Store</a>
-									</li>
 								</ul>
 							</div>
 							<br style={{ clear: "both" }} className="hidden-sm-up" />
@@ -67,16 +61,7 @@ function Footer() {
 										<a href="#">About Us</a>
 									</li>
 									<li>
-										<a href="#">Blog</a>
-									</li>
-									<li>
 										<a href="#">Careers</a>
-									</li>
-									<li>
-										<a href="#">Press</a>
-									</li>
-									<li>
-										<a href="#">Events</a>
 									</li>
 									<li>
 										<a href="#">Contact</a>
@@ -84,38 +69,19 @@ function Footer() {
 								</ul>
 							</div>
 							<div className="col-xs-6 col-sm-3">
-								<h4 className="my-2">Connect</h4>
+								<h4 className="my-2">Community</h4>
 								<ul className="list-unstyled list-light">
 									<li>
-										<a href="#">Support</a>
+										<a href="https://github.com/knekvasil/cryptatlas/issues">
+											Issues
+										</a>
 									</li>
 									<li>
-										<a href="#">Social</a>
-									</li>
-									<li>
-										<a href="#">Community</a>
+										<a href="https://github.com/knekvasil/cryptatlas/discussions">
+											Discussions
+										</a>
 									</li>
 								</ul>
-								<p className="color-light mt-2">Stay up-to-date!</p>
-								<form>
-									<div className="input-group mb-3">
-										<input
-											type="text"
-											className="form-control form-control-sm"
-											placeholder="Email"
-											aria-label="Email"
-											aria-describedby="basic-addon2"
-										/>
-										<div className="input-group-append">
-											<button
-												className="btn btn-primary btn-sm form-control-sm"
-												type="button"
-											>
-												OK
-											</button>
-										</div>
-									</div>
-								</form>
 							</div>
 						</div>
 						<hr />
