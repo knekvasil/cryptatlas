@@ -1,8 +1,23 @@
 // LoginView.js
 
 import "./AuthForm.css";
+import { Link } from "react-router-dom";
+
+import { useContext, useEffect } from "react";
+import { NavBarContext } from "../context/NavBarContext";
 
 function Login() {
+	// import context variable for login display
+	const { setAuthPath } = useContext(NavBarContext);
+
+	useEffect(() => {
+		setAuthPath(false);
+
+		return () => {
+			setAuthPath(true);
+		};
+	}, []);
+
 	return (
 		<section
 			className="pt-5 pb-5 mt-0 align-items-center d-flex bg-dark"
@@ -56,7 +71,7 @@ function Login() {
 										</div>
 										<input
 											className="form-control"
-											placeholder="Create password"
+											placeholder="Password"
 											type="password"
 										/>
 									</div>
@@ -64,11 +79,11 @@ function Login() {
 									<div className="form-group">
 										<button type="submit" className="btn btn-primary btn-block">
 											{"  "}
-											Create Account{" "}
+											Login{" "}
 										</button>
 									</div>
 									<p className="text-center">
-										Have an account? <a href=""> Log In</a>
+										Dont have an account? <Link to="/register">Register</Link>
 									</p>
 								</form>
 							</div>

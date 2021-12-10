@@ -1,6 +1,5 @@
 // LandingPageView.js
 
-import Footer from "../components/Footer";
 import "./LandingPageView.css";
 
 function LandingPageView() {
@@ -84,7 +83,7 @@ function LandingPageView() {
 								</div>
 								<div className="col h-100">
 									<div className="feature bg-primary bg-gradient text-white rounded-3 mb-3">
-										<i class="bi bi-cpu"></i>
+										<i className="bi bi-cpu"></i>
 									</div>
 									<h2 className="h5">Featured title</h2>
 									<p className="mb-0">
@@ -116,8 +115,8 @@ function LandingPageView() {
 									/>
 									<div className="fw-bold">
 										Tom Ato
-										<span className="fw-bold text-primary mx-1">/</span>
-										CEO, Pomodoro
+										<span className="fw-bold text-primary mx-1">/</span> CEO,
+										Cryptatlas
 									</div>
 								</div>
 							</div>

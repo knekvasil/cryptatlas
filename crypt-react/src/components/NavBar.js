@@ -1,12 +1,28 @@
 // NavBar.js
 
+import { Link } from "react-router-dom";
+import { useState, useContext } from "react";
+import { NavBarContext } from "../context/NavBarContext";
+
 function NavBar() {
+	const { authPath } = useContext(NavBarContext);
+
+	// function isAuthPath() {
+	// 	if (authPath) (
+	// 		window.location.pathname === "/register" ||
+	// 		window.location.pathname === "/login"
+	// 	) {
+	// 		setAuthState(false);
+	// 	} else {
+	// 		setAuthState(true);
+	// 	}
+	// }
+
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-			<div className="container px-5">
-				<a className="navbar-brand" href="index.html">
-					Cryptatlas
-				</a>
+			<div className="container px-5 mt-2 mb-2">
+				<Link to="/">Cryptatlas</Link>
+
 				<button
 					className="navbar-toggler"
 					type="button"
@@ -20,85 +36,17 @@ function NavBar() {
 				</button>
 				<div className="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-						<li className="nav-item">
-							<a className="nav-link" href="index.html">
-								Home
-							</a>
-						</li>
-						<li className="nav-item">
-							<a className="nav-link" href="about.html">
-								About
-							</a>
-						</li>
-						<li className="nav-item">
-							<a className="nav-link" href="contact.html">
-								Contact
-							</a>
-						</li>
-						<li className="nav-item">
-							<a className="nav-link" href="pricing.html">
-								Pricing
-							</a>
-						</li>
-						<li className="nav-item">
-							<a className="nav-link" href="faq.html">
-								FAQ
-							</a>
-						</li>
-						<li className="nav-item dropdown">
-							<a
-								className="nav-link dropdown-toggle"
-								id="navbarDropdownBlog"
-								href="#"
-								role="button"
-								data-bs-toggle="dropdown"
-								aria-expanded="false"
-							>
-								Blog
-							</a>
-							<ul
-								className="dropdown-menu dropdown-menu-end"
-								aria-labelledby="navbarDropdownBlog"
-							>
-								<li>
-									<a className="dropdown-item" href="blog-home.html">
-										Blog Home
-									</a>
-								</li>
-								<li>
-									<a className="dropdown-item" href="blog-post.html">
-										Blog Post
-									</a>
-								</li>
-							</ul>
-						</li>
-						<li className="nav-item dropdown">
-							<a
-								className="nav-link dropdown-toggle"
-								id="navbarDropdownPortfolio"
-								href="#"
-								role="button"
-								data-bs-toggle="dropdown"
-								aria-expanded="false"
-							>
-								Portfolio
-							</a>
-							<ul
-								className="dropdown-menu dropdown-menu-end"
-								aria-labelledby="navbarDropdownPortfolio"
-							>
-								<li>
-									<a className="dropdown-item" href="portfolio-overview.html">
-										Portfolio Overview
-									</a>
-								</li>
-								<li>
-									<a className="dropdown-item" href="portfolio-item.html">
-										Portfolio Item
-									</a>
-								</li>
-							</ul>
-						</li>
+						<li className="nav-item"></li>
+						{authPath && (
+							<li className="nav-item">
+								<Link to="/login">
+									{console.log(window.location.pathname === "/login")}
+									<button type="button" className="btn btn-light">
+										Login
+									</button>
+								</Link>
+							</li>
+						)}
 					</ul>
 				</div>
 			</div>

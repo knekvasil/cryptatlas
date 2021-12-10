@@ -99,7 +99,7 @@ function Footer() {
 											role="button"
 											className=" btn-white p-2 m-2 btn btn-round btn-rised btn-icon x"
 										>
-											<i class="bi bi-github"></i>
+											<i className="bi bi-github"></i>
 										</a>
 									</div>
 								</div>
