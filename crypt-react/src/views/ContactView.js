@@ -25,7 +25,7 @@ function Contact() {
 										placeholder="Enter your name..."
 										data-sb-validations="required"
 									/>
-									<label for="name">Full name</label>
+									<label htmlFor="name">Full name</label>
 									<div
 										className="invalid-feedback"
 										data-sb-feedback="name:required"
@@ -42,7 +42,7 @@ function Contact() {
 										placeholder="name@example.com"
 										data-sb-validations="required,email"
 									/>
-									<label for="email">Email address</label>
+									<label htmlFor="email">Email address</label>
 									<div
 										className="invalid-feedback"
 										data-sb-feedback="email:required"
@@ -65,7 +65,7 @@ function Contact() {
 										placeholder="(123) 456-7890"
 										data-sb-validations="required"
 									/>
-									<label for="phone">Phone number</label>
+									<label htmlFor="phone">Phone number</label>
 									<div
 										className="invalid-feedback"
 										data-sb-feedback="phone:required"
@@ -83,7 +83,7 @@ function Contact() {
 										style={{ height: "10rem" }}
 										data-sb-validations="required"
 									></textarea>
-									<label for="message">Message</label>
+									<label htmlFor="message">Message</label>
 									<div
 										className="invalid-feedback"
 										data-sb-feedback="message:required"
@@ -154,7 +154,7 @@ function Contact() {
 							<i className="bi bi-telephone"></i>
 						</div>
 						<div className="h5">Call us</div>
-						<p class="text-muted mb-0">
+						<p className="text-muted mb-0">
 							Call us during normal business hours at (555) 892-9403.
 						</p>
 					</div>

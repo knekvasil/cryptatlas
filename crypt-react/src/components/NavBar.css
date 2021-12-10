@@ -1,1 +1,14 @@
 /* NavBar.css */
+
+.logo-nav {
+	width: 200px !important;
+}
+
+.form-control {
+	display: flex;
+	justify-content: center;
+}
+
+.button {
+	padding: 10px;
+}

@@ -53,7 +53,7 @@ function Careers() {
 
 											<span className="d-none d-md-block col-1 text-center color--text">
 												<small>
-													<i class="bi bi-chevron-right"></i>
+													<i className="bi bi-chevron-right"></i>
 												</small>
 											</span>
 										</div>
@@ -88,7 +88,7 @@ function Careers() {
 
 											<span className="d-none d-md-block col-1 text-center color--text">
 												<small>
-													<i class="bi bi-chevron-right"></i>
+													<i className="bi bi-chevron-right"></i>
 												</small>
 											</span>
 										</div>
@@ -122,7 +122,7 @@ function Careers() {
 
 											<span className="d-none d-md-block col-1 text-center color--text">
 												<small>
-													<i class="bi bi-chevron-right"></i>
+													<i className="bi bi-chevron-right"></i>
 												</small>
 											</span>
 										</div>
@@ -161,7 +161,7 @@ function Careers() {
 
 											<span className="d-none d-md-block col-1 text-center color--text">
 												<small>
-													<i class="bi bi-chevron-right"></i>
+													<i className="bi bi-chevron-right"></i>
 												</small>
 											</span>
 										</div>
@@ -194,7 +194,7 @@ function Careers() {
 
 											<span className="d-none d-md-block col-1 text-center color--text">
 												<small>
-													<i class="bi bi-chevron-right"></i>
+													<i className="bi bi-chevron-right"></i>
 												</small>
 											</span>
 										</div>
@@ -227,7 +227,7 @@ function Careers() {
 
 											<span className="d-none d-md-block col-1 text-center color--text">
 												<small>
-													<i class="bi bi-chevron-right"></i>
+													<i className="bi bi-chevron-right"></i>
 												</small>
 											</span>
 										</div>

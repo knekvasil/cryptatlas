@@ -1,27 +1,21 @@
 // NavBar.js
 
 import { Link } from "react-router-dom";
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { NavBarContext } from "../context/NavBarContext";
+import logo from "./NavBarAssets/logo-cryptatlas.png";
+
+import "./NavBar.css";
 
 function NavBar() {
 	const { authPath } = useContext(NavBarContext);
 
-	// function isAuthPath() {
-	// 	if (authPath) (
-	// 		window.location.pathname === "/register" ||
-	// 		window.location.pathname === "/login"
-	// 	) {
-	// 		setAuthState(false);
-	// 	} else {
-	// 		setAuthState(true);
-	// 	}
-	// }
-
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div className="container px-5 mt-2 mb-2">
-				<Link to="/">Cryptatlas</Link>
+				<Link to="/">
+					<img src={logo} className="logo-nav" alt="" />
+				</Link>
 
 				<button
 					className="navbar-toggler"
@@ -40,7 +34,6 @@ function NavBar() {
 						{authPath && (
 							<li className="nav-item">
 								<Link to="/login">
-									{console.log(window.location.pathname === "/login")}
 									<button type="button" className="btn btn-light">
 										Login
 									</button>

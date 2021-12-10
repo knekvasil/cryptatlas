@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import { NavBarContext } from "../context/NavBarContext";
 
+import GoogleLogin from "react-google-login";
+
 function Register() {
 	const { setAuthPath } = useContext(NavBarContext);
 
@@ -37,13 +39,13 @@ function Register() {
 									Get started with your free account
 								</p>
 								<p>
-									<a href="" className="btn btn-block btn-info">
-										<i className="bi bi-twitter"></i> Login via Twitter
-									</a>
-
-									<a href="" className="btn btn-block btn-primary">
-										<i className="bi bi-facebook"></i> Login via facebook
-									</a>
+									<GoogleLogin
+										className="form-control center"
+										clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
+										buttonText="Login with Google"
+										// onSuccess={responseGoogle}
+										// onFailure={responseGoogle}
+									/>
 								</p>
 								<p className="text-muted font-weight-bold ">
 									<span>OR</span>
@@ -103,7 +105,7 @@ function Register() {
 											type="password"
 										/>
 									</div>
-									<div className="form-group">
+									<div className="form-group button">
 										<button type="submit" className="btn btn-primary btn-block">
 											{"  "}
 											Create Account{" "}
