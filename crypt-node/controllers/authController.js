@@ -12,12 +12,10 @@ async function signUpUser(req, res) {
 	}
 	const user = new User(req.body);
 
-	console.log("before try");
 	try {
 		const salt = bcrypt.genSaltSync();
 		user.password = bcrypt.hashSync(req.body.password, salt);
 		user.save();
-		console.log("inside try");
 		return res.status(201).json(user);
 	} catch (error) {
 		return res
