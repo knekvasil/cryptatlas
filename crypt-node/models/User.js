@@ -1,0 +1,22 @@
+// User.js
+
+const { model, Schema } = require("mongoose");
+
+const UserSchema = Schema({
+	name: { type: String, required: true, trim: true },
+	email: { type: String, required: true, unique: true, trim: true },
+	password: { type: String, required: true },
+	role: {
+		type: String,
+		enum: ["USER", "ADMIN"],
+		default: "USER",
+	},
+	google: { type: Boolean, default: false },
+});
+
+UserSchema.methods.toJSON = function () {
+	const { password, __v, ...user } = this.Object();
+	return user;
+};
+
+module.exports = model("User", UserSchema);
