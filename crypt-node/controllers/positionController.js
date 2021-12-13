@@ -3,7 +3,7 @@
 const Position = require("../models/Position");
 
 async function getAllPositions(req, res) {
-	const positions = await Position.find();
+	const positions = await Position.find().populate("userId");
 	try {
 		if (positions.length === 0) {
 			return res.status(400).json({ message: "Positions not found" });
@@ -16,7 +16,7 @@ async function getAllPositions(req, res) {
 
 async function getPositionById(req, res) {
 	const { id } = req.params;
-	const position = await Position.findById(id);
+	const position = await Position.findById(id).populate("userId");
 	try {
 		return res.status(200).json(position);
 	} catch (error) {
