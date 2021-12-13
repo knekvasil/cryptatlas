@@ -2,6 +2,8 @@
 
 const express = require("express");
 
+const { validateJwt } = require("../helpers/processJwt");
+
 const {
 	getAllPositions,
 	getPositionById,
@@ -12,10 +14,19 @@ const {
 
 const router = express.Router();
 
-router.get("/", getAllPositions);
-router.get("/position/:id", getPositionById);
-router.post("/position/", createPosition);
-router.put("/position/:id", updatePosition);
-router.delete("/position/:id", deletePosition);
+router.get("/", validateJwt, getAllPositions);
+router.get("/position/:id", validateJwt, getPositionById);
+router.post(
+	"/position/",
+	[
+		check("coin", "You are required to pick a coin").not().isEmpty(),
+		check("quantity", "You are required to enter a quantity").not().isEmpty(),
+		check("date", "You are required to enter a date").not().isEmpty(),
+		validateJwt,
+	],
+	createPosition
+);
+router.put("/position/:id", validateJwt, updatePosition);
+router.delete("/position/:id", validateJwt, deletePosition);
 
 module.exports = router;
