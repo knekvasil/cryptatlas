@@ -1,7 +1,9 @@
 // position.js
 
 const express = require("express");
+const router = express.Router();
 
+const { check } = require("express-validator");
 const { validateJwt } = require("../helpers/processJwt");
 
 const {
@@ -11,8 +13,6 @@ const {
 	updatePosition,
 	deletePosition,
 } = require("../controllers/positionController");
-
-const router = express.Router();
 
 router.get("/", validateJwt, getAllPositions);
 router.get("/position/:id", validateJwt, getPositionById);

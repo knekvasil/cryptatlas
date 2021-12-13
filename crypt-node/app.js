@@ -9,7 +9,7 @@ const app = express();
 require("dotenv").config();
 
 mongoose
-	.connect(processs.env.MONGODB_URL)
+	.connect(process.env.MONGODB_URL)
 	.then(() => console.log("Connected to db..."))
 	.catch(() => console.log("Couldn't connect to db..."));
 
