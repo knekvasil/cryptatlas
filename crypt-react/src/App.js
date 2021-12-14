@@ -20,16 +20,14 @@ function App() {
 			></link>
 			<NavBar />
 			<Routes>
-				<Route path="/" element={<LandingPageView />}></Route>
-				<Route path="/about" element={<AboutView />}></Route>
-
-				<Route path="/pricing" element={<PricingView />}></Route>
-				<Route path="/features" element={<Features />}></Route>
-				<Route path="/register" element={<RegisterView />}></Route>
-				<Route path="/login" element={<LoginView />}></Route>
-
-				<Route path="/contact" element={<ContactView />}></Route>
-				<Route path="/careers" element={<CareersView />}></Route>
+				<Route path="cryptatlas/" element={<LandingPageView />}></Route>
+				<Route path="cryptatlas/about" element={<AboutView />}></Route>
+				<Route path="cryptatlas/pricing" element={<PricingView />}></Route>
+				<Route path="cryptatlas/features" element={<Features />}></Route>
+				<Route path="cryptatlas/register" element={<RegisterView />}></Route>
+				<Route path="cryptatlas/login" element={<LoginView />}></Route>
+				<Route path="cryptatlas/contact" element={<ContactView />}></Route>
+				<Route path="cryptatlas/careers" element={<CareersView />}></Route>
 			</Routes>
 			<Footer />
 		</div>
