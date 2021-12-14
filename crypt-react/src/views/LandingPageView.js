@@ -1,6 +1,6 @@
 // LandingPageView.js
 
-import "./LandingPageView.css";
+// import "./LandingPageView.css";
 
 function LandingPageView() {
 	return (
