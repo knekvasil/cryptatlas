@@ -102,3 +102,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Slipped through the cracks
+.DS_Store
