@@ -5,8 +5,9 @@ import apiHelper from "../helpers/apiHelper";
 import axios from "axios";
 export const AuthContext = createContext({});
 
+export const jwtString = "jwtcryptatlas";
+
 function AuthProvider({ children }) {
-	const jwtString = "jwtcryptatlas";
 	const [loggedIn, setLoggedIn] = useState(false);
 	const [user, setUser] = useState({
 		email: "",
@@ -48,10 +49,11 @@ function AuthProvider({ children }) {
 			"http://localhost:5000/api/auth/googleLogin",
 			obj
 		);
-		console.log(response);
+		console.log("RESPONSEE --->>>", response);
 		if (response.data) {
-			localStorage.setItem("jwtposts", JSON.stringify(response.data));
+			localStorage.setItem(jwtString, JSON.stringify(response.data));
 			console.log("Logged in through Google");
+			setLoggedIn(true);
 		}
 	}
 
@@ -85,8 +87,9 @@ function AuthProvider({ children }) {
 
 	function logOutUser() {
 		localStorage.removeItem(jwtString);
-		console.log("Successfully Logged Out");
+		// localStorage.removeItem("jwtreservespot");
 		setLoggedIn(false);
+		console.log("logged out");
 	}
 
 	return (

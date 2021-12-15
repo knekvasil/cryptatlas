@@ -13,7 +13,8 @@ import GoogleLogin from "react-google-login";
 function Login() {
 	const { setAuthPath } = useContext(NavBarContext);
 	const navigate = useNavigate();
-	const { loginUser, googleLogin } = useContext(AuthContext);
+
+	const { loginUser, googleLogin, loggedIn } = useContext(AuthContext);
 	const [validated, setValidated] = useState(false);
 	const [errors, setErrors] = useState([]);
 	const [user, setUser] = useState({
@@ -52,7 +53,11 @@ function Login() {
 			email: "",
 			password: "",
 		});
+
+		// console.log(loggedIn);
+		// if (loggedIn) {
 		navigate("/portfolio");
+		// }
 	}
 
 	function responseGoogle(res) {

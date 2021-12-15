@@ -61,6 +61,7 @@ function Register() {
 		try {
 			const { email, name } = res.profileObj;
 			googleLogin({ email, name });
+			navigate("/portfolio");
 		} catch (error) {
 			console.log(error);
 		}
