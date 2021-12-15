@@ -34,6 +34,16 @@ async function validateJwt(req, res, next) {
 	}
 }
 
+async function revalidateJwt(req, res, next) {
+	const user = req.user;
+	const token = await generateJwt(user._id);
+	try {
+		return res.json({ token, user });
+	} catch (error) {
+		console.log(error);
+	}
+}
+
 async function isAdmin(req, res, next) {
 	if (!req.user) {
 		return res.status(500).json({ message: "Need validation first" });
@@ -46,4 +56,4 @@ async function isAdmin(req, res, next) {
 	}
 }
 
-module.exports = { generateJwt, validateJwt, isAdmin };
+module.exports = { generateJwt, validateJwt, revalidateJwt, isAdmin };

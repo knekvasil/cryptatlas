@@ -4,8 +4,13 @@ const express = require("express");
 const router = express.Router();
 
 const { check } = require("express-validator");
-const { loginUser, signUpUser } = require("../controllers/authController");
+const {
+	loginUser,
+	signUpUser,
+	googleLogin,
+} = require("../controllers/authController");
 const { validateFields } = require("../helpers/validateFields");
+const { validateJwt, revalidateJwt } = require("../helpers/processJwt");
 
 router.post(
 	"/login",
@@ -30,5 +35,8 @@ router.post(
 	],
 	signUpUser
 );
+
+router.post("/googleLogin", googleLogin);
+router.post("/renew", validateJwt, revalidateJwt);
 
 module.exports = router;

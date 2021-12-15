@@ -14,6 +14,7 @@ mongoose
 	.catch(() => console.log("Couldn't connect to db..."));
 
 app.use(express.json());
+app.use(cors());
 
 app.get("/", (req, res) => res.send("CRYPTATLAS API - HOME"));
 

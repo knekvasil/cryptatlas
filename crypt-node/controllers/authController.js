@@ -39,7 +39,27 @@ async function loginUser(req, res) {
 	return res.status(200).json({ token, user });
 }
 
+async function googleLogin(req, res) {
+	const { email, name } = req.body;
+	let user = await User.findOne({ email });
+	if (!user) {
+		user = await User.create({
+			email: email,
+			name: name,
+			password: "P",
+			google: true,
+		});
+	}
+	try {
+		const token = await generateJwt(user._id);
+		return res.status(200).json({ user, token });
+	} catch (error) {
+		return res.status(500).json({ message: "User was not able to login" });
+	}
+}
+
 module.exports = {
 	signUpUser,
 	loginUser,
+	googleLogin,
 };
