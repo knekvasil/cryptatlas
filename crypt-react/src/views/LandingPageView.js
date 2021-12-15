@@ -1,8 +1,8 @@
 // LandingPageView.js
 
-// import "./LandingPageView.css";
+import "./LandingPageView.css";
 
-function LandingPageView() {
+function LandingPage() {
 	return (
 		<>
 			<header className="bg-dark py-5">
@@ -128,4 +128,4 @@ function LandingPageView() {
 	);
 }
 
-export default LandingPageView;
+export default LandingPage;

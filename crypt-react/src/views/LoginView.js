@@ -3,13 +3,23 @@
 import "./AuthForm.css";
 import { Link } from "react-router-dom";
 
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router";
+import { AuthContext } from "../context/AuthContext";
 import { NavBarContext } from "../context/NavBarContext";
 
 import GoogleLogin from "react-google-login";
 
 function Login() {
 	const { setAuthPath } = useContext(NavBarContext);
+	const navigate = useNavigate();
+	const { loginUser } = useContext(AuthContext);
+	const [validated, setValidated] = useState(false);
+	const [errors, setErrors] = useState([]);
+	const [user, setUser] = useState({
+		password: "",
+		email: "",
+	});
 
 	useEffect(() => {
 		setAuthPath(false);
@@ -18,6 +28,32 @@ function Login() {
 			setAuthPath(true);
 		};
 	}, []);
+
+	function handleChange(event) {
+		setUser({
+			...user,
+			[event.target.name]: event.target.value,
+		});
+	}
+
+	async function handleSubmit(event) {
+		event.preventDefault();
+		const form = event.currentTarget;
+		if (form.checkValidity() === false) {
+			event.stopPropogation();
+			setValidated(true);
+			return;
+		}
+		const response = await loginUser(user);
+		if (response?.errors) {
+			setErrors(response.errors);
+		}
+		setUser({
+			email: "",
+			password: "",
+		});
+		navigate("/portfolio");
+	}
 
 	return (
 		<section

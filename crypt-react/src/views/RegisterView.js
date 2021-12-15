@@ -3,13 +3,27 @@
 import "./AuthForm.css";
 import { Link } from "react-router-dom";
 
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { NavBarContext } from "../context/NavBarContext";
+import { AuthContext } from "../context/AuthContext";
+
+import { useNavigate } from "react-router";
 
 import GoogleLogin from "react-google-login";
 
 function Register() {
+	const navigate = useNavigate();
+	const { signUpUser } = useContext(AuthContext);
+
+	const [validated, setValidated] = useState(false);
+	const [errors, setErrors] = useState([]);
 	const { setAuthPath } = useContext(NavBarContext);
+
+	const [user, setUser] = useState({
+		name: "",
+		email: "",
+		password: "",
+	});
 
 	useEffect(() => {
 		setAuthPath(false);
@@ -18,6 +32,30 @@ function Register() {
 			setAuthPath(true);
 		};
 	}, []);
+
+	function handleChange(event) {
+		setUser({ ...user, [event.target.name]: event.target.value });
+	}
+
+	async function handleSubmit(event) {
+		event.preventDetail();
+		const form = event.currentTarget;
+		if (form.checkValidity() === false) {
+			event.stopPropogation();
+			setValidated(true);
+			return;
+		}
+		const response = await signUpUser(user);
+		if (response?.errors) {
+			setErrors(response.errors);
+		}
+		setUser({
+			name: "",
+			email: "",
+			password: "",
+		});
+		navigate("/login");
+	}
 
 	return (
 		<section
@@ -50,7 +88,7 @@ function Register() {
 								<p className="text-muted font-weight-bold ">
 									<span>OR</span>
 								</p>
-								<form>
+								<form onSubmit={handleSubmit} noValidate validated={validated}>
 									<div className="form-group input-group">
 										<div className="input-group-prepend">
 											<span className="input-group-text">
@@ -59,7 +97,10 @@ function Register() {
 											</span>
 										</div>
 										<input
-											name=""
+											value={user.name}
+											onChange={handleChange}
+											name="name"
+											required
 											className="form-control"
 											placeholder="Full name"
 											type="text"
@@ -73,8 +114,11 @@ function Register() {
 											</span>
 										</div>
 										<input
-											name=""
+											value={user.email}
+											onChange={handleChange}
+											name="email"
 											className="form-control"
+											required
 											placeholder="Email address"
 											type="email"
 										/>
@@ -87,7 +131,11 @@ function Register() {
 											</span>
 										</div>
 										<input
+											value={user.password}
+											onChange={handleChange}
+											name="password"
 											className="form-control"
+											required
 											placeholder="Create password"
 											type="password"
 										/>
@@ -100,6 +148,10 @@ function Register() {
 											</span>
 										</div>
 										<input
+											name="password"
+											value={user.password}
+											onChange={handleChange}
+											required
 											className="form-control"
 											placeholder="Repeat password"
 											type="password"
