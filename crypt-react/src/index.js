@@ -8,14 +8,17 @@ import { BrowserRouter } from "react-router-dom";
 import NavBarProvider from "./context/NavBarContext";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import AuthProvider from "./context/AuthContext";
 
 ReactDOM.render(
 	<React.StrictMode>
-		<NavBarProvider>
-			<BrowserRouter>
-				<App />
-			</BrowserRouter>
-		</NavBarProvider>
+		<AuthProvider>
+			<NavBarProvider>
+				<BrowserRouter>
+					<App />
+				</BrowserRouter>
+			</NavBarProvider>
+		</AuthProvider>
 	</React.StrictMode>,
 	document.getElementById("root")
 );

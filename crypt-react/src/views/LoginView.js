@@ -13,7 +13,7 @@ import GoogleLogin from "react-google-login";
 function Login() {
 	const { setAuthPath } = useContext(NavBarContext);
 	const navigate = useNavigate();
-	const { loginUser } = useContext(AuthContext);
+	const { loginUser, googleLogin } = useContext(AuthContext);
 	const [validated, setValidated] = useState(false);
 	const [errors, setErrors] = useState([]);
 	const [user, setUser] = useState({
@@ -55,6 +55,17 @@ function Login() {
 		navigate("/portfolio");
 	}
 
+	function responseGoogle(res) {
+		try {
+			const { email, name } = res.profileObj;
+			googleLogin({ email, name });
+			navigate("/portfolio");
+		} catch (error) {
+			console.log(error);
+		}
+		// todo send to AuthContext method => googleLogin
+	}
+
 	return (
 		<section
 			className="pt-5 pb-5 mt-0 align-items-center d-flex bg-dark"
@@ -77,8 +88,8 @@ function Login() {
 										className="form-control center"
 										clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
 										buttonText="Login with Google"
-										// onSuccess={responseGoogle}
-										// onFailure={responseGoogle}
+										onSuccess={responseGoogle}
+										onFailure={responseGoogle}
 									/>
 								</p>
 								<p className="text-muted font-weight-bold ">
@@ -93,7 +104,9 @@ function Login() {
 											</span>
 										</div>
 										<input
-											name=""
+											value={user.email}
+											onChange={handleChange}
+											name="email"
 											className="form-control"
 											placeholder="Email address"
 											type="email"
@@ -107,6 +120,9 @@ function Login() {
 											</span>
 										</div>
 										<input
+											value={user.password}
+											onChange={handleChange}
+											name="password"
 											className="form-control"
 											placeholder="Password"
 											type="password"
@@ -114,7 +130,11 @@ function Login() {
 									</div>
 
 									<div className="form-group button">
-										<button type="submit" className="btn btn-primary btn-block">
+										<button
+											type="submit"
+											onClick={handleSubmit}
+											className="btn btn-primary btn-block"
+										>
 											{"  "}
 											Login{" "}
 										</button>

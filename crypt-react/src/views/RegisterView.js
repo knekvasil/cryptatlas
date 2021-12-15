@@ -13,7 +13,7 @@ import GoogleLogin from "react-google-login";
 
 function Register() {
 	const navigate = useNavigate();
-	const { signUpUser } = useContext(AuthContext);
+	const { signUpUser, googleLogin } = useContext(AuthContext);
 
 	const [validated, setValidated] = useState(false);
 	const [errors, setErrors] = useState([]);
@@ -38,7 +38,7 @@ function Register() {
 	}
 
 	async function handleSubmit(event) {
-		event.preventDetail();
+		event.preventDefault();
 		const form = event.currentTarget;
 		if (form.checkValidity() === false) {
 			event.stopPropogation();
@@ -54,7 +54,17 @@ function Register() {
 			email: "",
 			password: "",
 		});
-		navigate("/login");
+		navigate("/portfolio");
+	}
+
+	function responseGoogle(res) {
+		try {
+			const { email, name } = res.profileObj;
+			googleLogin({ email, name });
+		} catch (error) {
+			console.log(error);
+		}
+		// todo send to AuthContext method => googleLogin
 	}
 
 	return (
@@ -81,14 +91,15 @@ function Register() {
 										className="form-control center"
 										clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
 										buttonText="Login with Google"
-										// onSuccess={responseGoogle}
-										// onFailure={responseGoogle}
+										onSuccess={responseGoogle}
+										onFailure={responseGoogle}
 									/>
 								</p>
 								<p className="text-muted font-weight-bold ">
 									<span>OR</span>
 								</p>
-								<form onSubmit={handleSubmit} noValidate validated={validated}>
+
+								<form onSubmit={handleSubmit}>
 									<div className="form-group input-group">
 										<div className="input-group-prepend">
 											<span className="input-group-text">
@@ -100,7 +111,6 @@ function Register() {
 											value={user.name}
 											onChange={handleChange}
 											name="name"
-											required
 											className="form-control"
 											placeholder="Full name"
 											type="text"
@@ -118,7 +128,6 @@ function Register() {
 											onChange={handleChange}
 											name="email"
 											className="form-control"
-											required
 											placeholder="Email address"
 											type="email"
 										/>
@@ -135,7 +144,6 @@ function Register() {
 											onChange={handleChange}
 											name="password"
 											className="form-control"
-											required
 											placeholder="Create password"
 											type="password"
 										/>
@@ -151,14 +159,17 @@ function Register() {
 											name="password"
 											value={user.password}
 											onChange={handleChange}
-											required
 											className="form-control"
 											placeholder="Repeat password"
 											type="password"
 										/>
 									</div>
 									<div className="form-group button">
-										<button type="submit" className="btn btn-primary btn-block">
+										<button
+											type="submit"
+											onClick={handleSubmit}
+											className="btn btn-primary btn-block"
+										>
 											{"  "}
 											Create Account{" "}
 										</button>

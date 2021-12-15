@@ -2,19 +2,22 @@
 
 import { createContext, useEffect, useState } from "react";
 import apiHelper from "../helpers/apiHelper";
-
+import axios from "axios";
 export const AuthContext = createContext({});
 
 function AuthProvider({ children }) {
 	const jwtString = "jwtcryptatlas";
 	const [loggedIn, setLoggedIn] = useState(false);
-	const [user, setUser] = useState({});
+	const [user, setUser] = useState({
+		email: "",
+		name: "",
+		password: "",
+		role: "",
+		google: false,
+	});
 
 	useEffect(() => {
 		checkedLogged();
-	}, []);
-
-	useEffect(() => {
 		revalidateToken();
 	}, [loggedIn]);
 
@@ -34,9 +37,21 @@ function AuthProvider({ children }) {
 			setUser(data.user);
 			setLocalStorageToken(data);
 			setLoggedIn(true);
-			toast.success("Successfully Loged In");
+			console.log("Successfully logged in");
 		} catch (error) {
-			toast.error(`${error.response.data.message}`);
+			console.log(`${error.response.data.message}`);
+		}
+	}
+
+	async function googleLogin(obj) {
+		const response = await axios.post(
+			"http://localhost:5000/api/auth/googleLogin",
+			obj
+		);
+		console.log(response);
+		if (response.data) {
+			localStorage.setItem("jwtposts", JSON.stringify(response.data));
+			console.log("Logged in through Google");
 		}
 	}
 
@@ -44,7 +59,7 @@ function AuthProvider({ children }) {
 		const response = await apiHelper.post("/auth/signup", obj);
 		if (response.data) {
 			setLocalStorageToken(response.data);
-			toast.success("Signed Up & Logged In");
+			console.log("Signed Up & Logged In");
 			setLoggedIn(true);
 			setUser({
 				name: "",
@@ -63,14 +78,14 @@ function AuthProvider({ children }) {
 			setUser(data.user);
 			setLocalStorageToken(data);
 		} catch (error) {
-			localStorage.removeItem(jwt_string);
+			localStorage.removeItem(jwtString);
 			console.log(error);
 		}
 	}
 
 	function logOutUser() {
-		localStorage.removeItem(jwt_string);
-		toast.warning("Successfully Logged Out");
+		localStorage.removeItem(jwtString);
+		console.log("Successfully Logged Out");
 		setLoggedIn(false);
 	}
 
@@ -83,6 +98,7 @@ function AuthProvider({ children }) {
 				loginUser,
 				logOutUser,
 				signUpUser,
+				googleLogin,
 			}}
 		>
 			{children}
