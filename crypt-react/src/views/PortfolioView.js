@@ -1,8 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 let axios = require("axios");
-const cc = require("cryptocompare");
-
-cc.setApiKey(process.env.CRYPTOCOMPARE_API_KEY);
 
 import Chart from "../components/Chart";
 import CryptDropdown from "../components/CryptDropdown";
@@ -46,6 +43,7 @@ function Portfolio() {
 				Add New Position
 			</Button>
 
+			{/* HERE LIES MY BABY RIP */}
 			{/* <select>
 				{CoinList.map((coin) => (
 					<option

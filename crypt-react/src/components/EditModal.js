@@ -1,16 +1,16 @@
-// PortfolioModal.js
+// EditModal.js
 import { useContext, useState } from "react";
 import { Modal, Button, Dropdown } from "react-bootstrap";
 import CryptDropdown from "./CryptDropdown";
 import DatePicker from "react-datepicker";
 
-import "./PortfolioModal.css";
+import "./EditModal.css";
 import "react-datepicker/dist/react-datepicker.css";
 import { AuthContext } from "../context/AuthContext";
 
 import { PositionContext } from "../context/PositionContext";
 
-function PortfolioModal(props) {
+function EditModal(props) {
 	const { Position, setPosition, createPositionInApi } =
 		useContext(PositionContext);
 	const { user } = useContext(AuthContext);
@@ -137,4 +137,4 @@ function PortfolioModal(props) {
 	);
 }
 
-export default PortfolioModal;
+export default EditModal;

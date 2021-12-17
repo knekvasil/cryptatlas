@@ -108,10 +108,10 @@ function About() {
 							<div className="text-center">
 								<img
 									className="img-fluid rounded-circle mb-4 px-4"
-									src="https://dummyimage.com/150x150/ced4da/6c757d"
+									src="https://avatars.githubusercontent.com/u/91507730?v=4"
 									alt="..."
 								/>
-								<h5 className="fw-bolder">Toribio Nerthus</h5>
+								<h5 className="fw-bolder">Paola Garcia</h5>
 								<div className="fst-italic text-muted">Operations Manager</div>
 							</div>
 						</div>

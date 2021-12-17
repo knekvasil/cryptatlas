@@ -9,14 +9,17 @@ import NavBarProvider from "./context/NavBarContext";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import AuthProvider from "./context/AuthContext";
+import PositionProvider from "./context/PositionContext";
 
 ReactDOM.render(
 	<React.StrictMode>
 		<AuthProvider>
 			<NavBarProvider>
-				<BrowserRouter>
-					<App />
-				</BrowserRouter>
+				<PositionProvider>
+					<BrowserRouter>
+						<App />
+					</BrowserRouter>
+				</PositionProvider>
 			</NavBarProvider>
 		</AuthProvider>
 	</React.StrictMode>,

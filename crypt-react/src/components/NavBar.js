@@ -11,7 +11,7 @@ import { useNavigate } from "react-router";
 function NavBar() {
 	const { authPath } = useContext(NavBarContext);
 	const { loggedIn, logOutUser } = useContext(AuthContext);
-	console.log("LoggedIn -> ", loggedIn);
+	// console.log("LoggedIn -> ", loggedIn);
 	const navigate = useNavigate();
 
 	async function handleLogOut(event) {
