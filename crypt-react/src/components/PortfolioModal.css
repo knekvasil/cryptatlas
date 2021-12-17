@@ -1,0 +1,13 @@
+/* PortfolioModal.css */
+
+.form-row {
+	display: flex;
+}
+
+.datePicker {
+	height: 37px;
+}
+
+.modal-body {
+	display: flex;
+}

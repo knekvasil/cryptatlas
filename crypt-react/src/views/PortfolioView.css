@@ -1,0 +1,15 @@
+/* PortfolioView.css */
+
+.dropdown-menu {
+	height: 315px;
+	overflow-y: scroll;
+}
+
+.dropdown-toggle {
+	/* color: white !important; */
+	background-color: grey !important;
+}
+
+#text {
+	display: hidden;
+}

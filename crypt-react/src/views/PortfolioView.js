@@ -5,8 +5,17 @@ const cc = require("cryptocompare");
 cc.setApiKey(process.env.CRYPTOCOMPARE_API_KEY);
 
 import Chart from "../components/Chart";
+import CryptDropdown from "../components/CryptDropdown";
 
+import { Dropdown, Button } from "react-bootstrap";
+
+import "./PortfolioView.css";
+import PortfolioModal from "../components/PortfolioModal";
+import CryptTable from "../components/CryptTable";
 function Portfolio() {
+	const [CoinList, setCoinList] = useState([]);
+	const [modalShow, setModalShow] = useState(false);
+
 	useEffect(() => {
 		callDropdownAPI();
 	}, []);
@@ -17,34 +26,43 @@ function Portfolio() {
 				`https://min-api.cryptocompare.com/data/top/mktcapfull?limit=50&tsym=USD&api_key=${process.env.CRYPTOCOMPARE_API_KEY}`
 			)
 			.then((res) => {
-				console.log(res.data);
+				let coinObj = res.data.Data;
+
+				coinObj.map((coinData) => {
+					let storedData = {
+						name: coinData.CoinInfo.Name,
+						img: `https://www.cryptocompare.com/${coinData.CoinInfo.ImageUrl}`,
+					};
+					setCoinList((prevList) => [...prevList, storedData]);
+				});
 			})
 			.catch((err) => console.log(err));
 	}
 
 	return (
 		<>
-			<h1 className="mt-3">Coin Comparison</h1>
-			<div className="dropdown">
-				<button
-					className="btn btn-secondary btn-lg dropdown-toggle"
-					type="button"
-					id="dropdownMenuButton"
-					data-toggle="dropdown"
-					aria-haspopup="true"
-					aria-expanded="false"
-				>
-					Choose Coins
-				</button>
-				<div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-					<a className="dropdown-item" href="#">
-						Another action
-					</a>
-					<a className="dropdown-item" href="#">
-						Something else here
-					</a>
-				</div>
-			</div>
+			<h2 className="mt-3">Portfolio</h2>
+			<Button variant="primary" onClick={() => setModalShow(true)}>
+				Add New Position
+			</Button>
+
+			{/* <select>
+				{CoinList.map((coin) => (
+					<option
+						style={{ backgroundImage: "url(coin.img)" }}
+						value={coin.name}
+					>
+						{coin.name}
+					</option>
+				))}
+			</select> */}
+
+			<PortfolioModal
+				element={CoinList}
+				show={modalShow}
+				onHide={() => setModalShow(false)}
+			/>
+			<CryptTable />
 			<Chart />
 		</>
 	);

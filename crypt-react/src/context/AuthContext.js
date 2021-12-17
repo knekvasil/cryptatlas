@@ -87,7 +87,6 @@ function AuthProvider({ children }) {
 
 	function logOutUser() {
 		localStorage.removeItem(jwtString);
-		// localStorage.removeItem("jwtreservespot");
 		setLoggedIn(false);
 		console.log("logged out");
 	}
