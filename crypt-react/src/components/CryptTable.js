@@ -5,10 +5,11 @@ import { useContext } from "react";
 import { PositionContext } from "../context/PositionContext";
 
 import TableRow from "./TableRow";
+import { AuthContext } from "../context/AuthContext";
 
 function CryptTable() {
 	const { Positions } = useContext(PositionContext);
-
+	const { user } = useContext(AuthContext);
 	return (
 		<>
 			<h3>Positions</h3>
@@ -26,13 +27,17 @@ function CryptTable() {
 					</tr>
 				</thead>
 				<tbody>
-					{Positions.map((position, i) => {
-						return (
-							<>
-								<TableRow key={i} elem={position} />
-							</>
-						);
-					})}
+					{Positions.filter((position) => position.userId._id == user._id).map(
+						(position, i) => {
+							return (
+								<>
+									{console.log("POSITION", position)}
+									{console.log("USER", user)}
+									<TableRow key={i} elem={position} />
+								</>
+							);
+						}
+					)}
 				</tbody>
 			</Table>
 		</>
