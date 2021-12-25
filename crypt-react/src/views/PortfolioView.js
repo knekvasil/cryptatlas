@@ -61,7 +61,8 @@ function Portfolio() {
 				onHide={() => setModalShow(false)}
 			/>
 			<CryptTable />
-			<Chart />
+
+			<Chart element={1} />
 		</>
 	);
 }

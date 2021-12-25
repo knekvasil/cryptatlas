@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 import ContactView from "./views/ContactView";
 import Features from "./views/Features";
 import Portfolio from "./views/PortfolioView";
+import AuthRoute from "./components/AuthRoute";
 
 function App() {
 	return (
@@ -33,7 +34,9 @@ function App() {
 				<Route path="/contact" element={<ContactView />}></Route>
 				<Route path="/careers" element={<CareersView />}></Route>
 
-				<Route path="/portfolio" element={<Portfolio />}></Route>
+				<Route element={<AuthRoute />}>
+					<Route path="/portfolio" element={<Portfolio />}></Route>
+				</Route>
 			</Routes>
 			<Footer />
 			<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

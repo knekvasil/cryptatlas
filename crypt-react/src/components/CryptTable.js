@@ -7,13 +7,7 @@ import { PositionContext } from "../context/PositionContext";
 import TableRow from "./TableRow";
 
 function CryptTable() {
-	const {
-		Position,
-		setPosition,
-		Positions,
-		setPositions,
-		deletePositionInApi,
-	} = useContext(PositionContext);
+	const { Positions } = useContext(PositionContext);
 
 	return (
 		<>
@@ -29,7 +23,6 @@ function CryptTable() {
 						<th>Initial Value</th>
 						<th>Total Value</th>
 						<th>Total Change</th>
-						<th>Edit/Delete</th>
 					</tr>
 				</thead>
 				<tbody>

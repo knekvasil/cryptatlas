@@ -1,48 +1,57 @@
 // Chart.js
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Line, Bar } from "react-chartjs-2";
 
-function Chart() {
-	// hooks
+function Chart(props) {
+	// const [ChartData, setChartData] = useState({});
 	useEffect(() => {
 		// initChart();
 	}, []);
-
+	let chartLabels = [1, 2, 3, 4, 4, 5, 6, 7, 8];
+	let portfolioSum = [1, 2, 3, 4, 4, 5, 6, 7, 8];
 	function initChart() {
-		var chart = new Chart(document.getElementById("portChart"), {
-			type: "line",
-			data: {
-				labels: [1500, 1600, 1700, 1750, 1800, 1850, 1900, 1950, 1999, 2050],
-				datasets: [
-					{
-						data: [86, 114, 106, 106, 107, 111, 133, 221, 783, 2478],
-						label: "Africa",
-						borderColor: "#3e95cd",
-						fill: false,
-					},
-				],
-			},
-			options: {
-				title: {
-					display: true,
-					text: "World population per region (in millions)",
-				},
-			},
-		});
-		return chart;
+		// let labelsList = ["A", "B", "C", "D"];
+		// let dataList = [1, 2, 6, 4];
+		// setChartData({
+		// 	// labels: labelsList.map((label) => label),
+		// 	datasets: [
+		// 		{
+		// 			labels: "Price in USD",
+		// 			data: dataList.map((datum) => datum),
+		// 			backgroundColor: [
+		// 				"#ffbb11",
+		// 				"#ecf0f1",
+		// 				"#50AF95",
+		// 				"#f3ba2f",
+		// 				"#2a71d0",
+		// 			],
+		// 		},
+		// 	],
+		// });
 	}
 
 	return (
-		<div className="col-xl-6">
-			<div className="card mb-4">
-				<div className="card-header">
-					<i className="fas fa-chart-area me-1"></i>
-					Portfolio Price History
-				</div>
-				<div className="card-body">
-					<canvas id="portChart" width="100%" height="40"></canvas>
-				</div>
-			</div>
+		<div>
+			<Line
+				data={{
+					labels: chartLabels,
+					datasets: [
+						{
+							label: "Portfolio Value",
+							data: portfolioSum,
+
+							fill: false,
+							tension: 0.4,
+						},
+					],
+				}}
+				height={400}
+				// width={100}
+				options={{
+					maintainAspectRatio: false,
+				}}
+			/>
 		</div>
 	);
 }

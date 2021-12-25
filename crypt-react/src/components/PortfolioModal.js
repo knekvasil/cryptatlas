@@ -89,8 +89,10 @@ function PortfolioModal(props) {
 							</Dropdown> */}
 
 							<select onChange={handleChange} name="coin">
-								{props.element.map((coin) => (
-									<option value={coin.name}>{coin.name}</option>
+								{props.element.map((coin, i) => (
+									<option key={i} value={coin.name}>
+										{coin.name}
+									</option>
 								))}
 							</select>
 

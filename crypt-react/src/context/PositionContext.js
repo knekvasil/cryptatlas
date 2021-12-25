@@ -34,7 +34,7 @@ function PositionProvider({ children }) {
 	// GET/positions/position/:id
 	async function getSinglePositionFromApi(id) {
 		const response = await apiHelper.get(`/positions/position/${id}`);
-		return reponse;
+		return response;
 	}
 
 	// POST/positions/position
@@ -65,7 +65,8 @@ function PositionProvider({ children }) {
 
 	// DELETE/positions/position/:id
 	async function deletePositionInApi(id) {
-		const response = await apiHelper.delete(`/positions/position${id}`);
+		const response = await apiHelper.delete(`/positions/position/${id}`);
+		getAllPositions();
 		return response;
 	}
 

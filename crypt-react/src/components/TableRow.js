@@ -17,8 +17,9 @@ function TableRow(props) {
 	const { deletePositionInApi } = useContext(PositionContext);
 
 	async function handlePositionDelete(event) {
+		console.log(event, props.elem._id);
 		event.preventDefault();
-		await deletePositionInApi(props._id);
+		await deletePositionInApi(props.elem._id);
 	}
 	async function callRowAPI() {
 		// Present Price
@@ -66,13 +67,13 @@ function TableRow(props) {
 			<td>${(props.elem.quantity * PresentCoinPrice).toFixed(2)}</td>
 			<td>
 				{(
-					((InitialCoinPrice - PresentCoinPrice) / PresentCoinPrice) *
+					((PresentCoinPrice - InitialCoinPrice) / InitialCoinPrice) *
 					100
 				).toFixed(2)}
 				%
 			</td>
 			<td>
-				<button
+				{/* <button
 					// onClick={handlePostDelete}
 					className="form-control btn btn-primary"
 					style={{ width: "30px", height: "21px" }}
@@ -85,7 +86,7 @@ function TableRow(props) {
 							right: "6px",
 						}}
 					></i>
-				</button>{" "}
+				</button>{" "} */}
 				<button
 					onClick={handlePositionDelete}
 					className="form-control btn btn-danger"
@@ -96,7 +97,7 @@ function TableRow(props) {
 						style={{
 							position: "relative",
 							bottom: "9px",
-							right: "5.5px",
+							right: "6.5px",
 						}}
 					></i>
 				</button>
