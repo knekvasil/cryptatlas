@@ -1,12 +1,12 @@
 // Chart.js
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { Line, Bar } from "react-chartjs-2";
-import { PositionContext } from "../context/PositionContext";
+import { TableToChartContext } from "../context/TableToChartContext";
 
 function Chart(props) {
 	// const [ChartData, setChartData] = useState({});
-	const { Positions } = useContext(PositionContext);
+	const { CoinDatePriceStore } = useContext(TableToChartContext);
 
 	useEffect(() => {
 		// initChart();
