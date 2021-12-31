@@ -2,12 +2,16 @@
 
 import { useEffect, useState } from "react";
 import { Line, Bar } from "react-chartjs-2";
+import { PositionContext } from "../context/PositionContext";
 
 function Chart(props) {
 	// const [ChartData, setChartData] = useState({});
+	const { Positions } = useContext(PositionContext);
+
 	useEffect(() => {
 		// initChart();
 	}, []);
+
 	let chartLabels = [1, 2, 3, 4, 4, 5, 6, 7, 8];
 	let portfolioSum = [1, 2, 3, 4, 4, 5, 6, 7, 8];
 	function initChart() {

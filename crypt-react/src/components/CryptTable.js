@@ -31,8 +31,6 @@ function CryptTable() {
 						(position, i) => {
 							return (
 								<>
-									{console.log("POSITION", position)}
-									{console.log("USER", user)}
 									<TableRow key={i} elem={position} />
 								</>
 							);
