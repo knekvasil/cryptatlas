@@ -10,8 +10,6 @@ export const PositionContext = createContext({});
 
 function PositionProvider({ children }) {
 	const { user } = useContext(AuthContext);
-	// console.log("USER IN POSITIONCONTEXT", user);
-	// []? or some const response = await apiHelper.get("/positions");
 
 	const [Positions, setPositions] = useState([]);
 	const [Position, setPosition] = useState({

@@ -46,11 +46,7 @@ function AuthProvider({ children }) {
 
 	async function googleLogin(obj) {
 		const response = await apiHelper.post("/auth/googleLogin", obj);
-		// const response = await axios.post(
-		// 	"http://localhost:5000/api/auth/googleLogin",
-		// 	obj
-		// );
-		// console.log("RESPONSEE --->>>", response);
+
 		if (response.data) {
 			localStorage.setItem(jwtString, JSON.stringify(response.data));
 			console.log("Logged in through Google");

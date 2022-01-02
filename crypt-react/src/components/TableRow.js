@@ -11,13 +11,19 @@ cc.setApiKey(process.env.CRYPTOCOMPARE_API_KEY);
 function TableRow(props) {
 	const [PresentCoinPrice, setPresentCoinPrice] = useState(Number);
 	const [InitialCoinPrice, setInitialCoinPrice] = useState(Number);
+
+	let presentDate = new Date();
+	const dd = String(presentDate.getDate()).padStart(2, "0");
+	const mm = String(presentDate.getMonth() + 1).padStart(2, "0");
+	const yyyy = presentDate.getFullYear();
+	presentDate = yyyy + "-" + mm + "-" + dd;
+
 	useEffect(() => {
 		callRowAPI();
 	}, []);
 
 	const { deletePositionInApi } = useContext(PositionContext);
-	const { CoinDatePriceStore, setCoinDatePriceStore } =
-		useContext(TableToChartContext);
+	const { ChartStore, setChartStore } = useContext(TableToChartContext);
 
 	async function handlePositionDelete(event) {
 		console.log(event, props.elem._id);
@@ -34,7 +40,13 @@ function TableRow(props) {
 			.then((res) => {
 				let coinObj = res.data.USD;
 				setPresentCoinPrice((prevCoinPrice) => coinObj);
-				// setCoinDatePriceStore => newElement{presentDate, present Price}
+				// ChartStore => newElement{presentDate, present Price}
+				console.log("COINZ", res.data);
+				setChartStore({
+					date: presentDate,
+					coin: props.elem.coin,
+					value: coinObj,
+				});
 			})
 			.catch((err) => console.log(err));
 		cc.priceHistorical(
@@ -46,7 +58,7 @@ function TableRow(props) {
 				console.log("BTCPRICE,", price);
 				let pastPrice = price.USD;
 				setInitialCoinPrice((prevCoinPrice) => pastPrice);
-				// setCoinDatePriceStore => newElement{past date, pastPrice}
+				// setChartStore => newElement{past date, pastPrice}
 			})
 			.catch(console.error);
 		// Historical Price

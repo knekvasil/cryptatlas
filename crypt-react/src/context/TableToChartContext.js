@@ -3,12 +3,14 @@ import { createContext, useState } from "react";
 export const TableToChartContext = createContext({});
 
 function TableToChartProvider({ children }) {
-	const [CoinDatePriceStore, setCoinDatePriceStore] = useState({});
+	const [ChartStore, setChartStore] = useState({
+		date: "",
+		coin: "",
+		value: "",
+	});
 
 	return (
-		<TableToChartContext.Provider
-			value={(CoinDatePriceStore, setCoinDatePriceStore)}
-		>
+		<TableToChartContext.Provider value={(ChartStore, setChartStore)}>
 			{children}
 		</TableToChartContext.Provider>
 	);

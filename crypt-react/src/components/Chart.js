@@ -6,7 +6,7 @@ import { TableToChartContext } from "../context/TableToChartContext";
 
 function Chart(props) {
 	// const [ChartData, setChartData] = useState({});
-	const { CoinDatePriceStore } = useContext(TableToChartContext);
+	const { ChartStore } = useContext(TableToChartContext);
 
 	useEffect(() => {
 		// initChart();

@@ -13,32 +13,20 @@ import { PositionContext } from "../context/PositionContext";
 function PortfolioModal(props) {
 	const { Position, setPosition, createPositionInApi } =
 		useContext(PositionContext);
-	const { user } = useContext(AuthContext);
-	// console.log("USER", user);
+
 	const [buttonText, setButtonText] = useState("Choose Coin");
 	const [startDate, setStartDate] = useState(new Date());
-
-	// const [Position, setPosition] = useState({
-	// 	userId: user._id,
-	// 	coin: "",
-	// 	quantity: "",
-	// 	date: "",
-	// });
-
-	// console.log(Position);
 
 	function handleChange(event) {
 		setPosition({
 			...Position,
 			[event.target.name]: event.target.value,
 		});
-		// console.log(Position);
 	}
 
 	async function handleSubmit(event) {
 		event.preventDefault();
 		await createPositionInApi(Position);
-		console.log(Position);
 	}
 
 	function changeButtonText(text) {
