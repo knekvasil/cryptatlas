@@ -3,6 +3,7 @@
 import { PositionContext } from "../context/PositionContext";
 import { useContext, useEffect, useState } from "react";
 import axios from "axios";
+import { TableToChartContext } from "../context/TableToChartContext";
 
 const cc = require("cryptocompare");
 cc.setApiKey(process.env.CRYPTOCOMPARE_API_KEY);
@@ -15,12 +16,15 @@ function TableRow(props) {
 	}, []);
 
 	const { deletePositionInApi } = useContext(PositionContext);
+	const { CoinDatePriceStore, setCoinDatePriceStore } =
+		useContext(TableToChartContext);
 
 	async function handlePositionDelete(event) {
 		console.log(event, props.elem._id);
 		event.preventDefault();
 		await deletePositionInApi(props.elem._id);
 	}
+
 	async function callRowAPI() {
 		// Present Price
 		axios
@@ -30,6 +34,7 @@ function TableRow(props) {
 			.then((res) => {
 				let coinObj = res.data.USD;
 				setPresentCoinPrice((prevCoinPrice) => coinObj);
+				// setCoinDatePriceStore => newElement{presentDate, present Price}
 			})
 			.catch((err) => console.log(err));
 		cc.priceHistorical(
@@ -41,6 +46,7 @@ function TableRow(props) {
 				console.log("BTCPRICE,", price);
 				let pastPrice = price.USD;
 				setInitialCoinPrice((prevCoinPrice) => pastPrice);
+				// setCoinDatePriceStore => newElement{past date, pastPrice}
 			})
 			.catch(console.error);
 		// Historical Price
