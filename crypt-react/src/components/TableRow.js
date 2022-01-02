@@ -42,10 +42,11 @@ function TableRow(props) {
 				setPresentCoinPrice((prevCoinPrice) => coinObj);
 				// ChartStore => newElement{presentDate, present Price}
 				console.log("COINZ", res.data);
+				console.log("chart.asdfasd,", ChartStore);
 				setChartStore({
 					date: presentDate,
 					coin: props.elem.coin,
-					value: coinObj,
+					value: (coinObj * props.elem.quantity).toFixed(2),
 				});
 			})
 			.catch((err) => console.log(err));
