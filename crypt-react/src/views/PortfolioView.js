@@ -9,12 +9,18 @@ import { Dropdown, Button } from "react-bootstrap";
 import "./PortfolioView.css";
 import PortfolioModal from "../components/PortfolioModal";
 import CryptTable from "../components/CryptTable";
+
+import { PositionContext } from "../context/PositionContext";
+
 function Portfolio() {
 	const [CoinList, setCoinList] = useState([]);
 	const [modalShow, setModalShow] = useState(false);
 
+	const { getAllPositions } = useContext(PositionContext);
+
 	useEffect(() => {
 		callDropdownAPI();
+		getAllPositions();
 	}, []);
 
 	async function callDropdownAPI() {

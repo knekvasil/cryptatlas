@@ -26,7 +26,6 @@ function TableRow(props) {
 	const { ChartStore, setChartStore } = useContext(TableToChartContext);
 
 	async function handlePositionDelete(event) {
-		console.log(event, props.elem._id);
 		event.preventDefault();
 		await deletePositionInApi(props.elem._id);
 	}
@@ -42,7 +41,7 @@ function TableRow(props) {
 				setPresentCoinPrice((prevCoinPrice) => coinObj);
 				// ChartStore => newElement{presentDate, present Price}
 				console.log("COINZ", res.data);
-				console.log("chart.asdfasd,", ChartStore);
+				console.log("chart-state:", ChartStore);
 				setChartStore({
 					date: presentDate,
 					coin: props.elem.coin,

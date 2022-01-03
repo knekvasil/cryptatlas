@@ -18,10 +18,6 @@ function PositionProvider({ children }) {
 		date: "",
 	});
 
-	useEffect(() => {
-		getAllPositions();
-	}, []);
-
 	// GET/positions
 	async function getAllPositions() {
 		const response = await apiHelper.get("/positions");
