@@ -10,7 +10,7 @@ function TableToChartProvider({ children }) {
 	});
 
 	return (
-		<TableToChartContext.Provider value={(ChartStore, setChartStore)}>
+		<TableToChartContext.Provider value={{ ChartStore, setChartStore }}>
 			{children}
 		</TableToChartContext.Provider>
 	);
