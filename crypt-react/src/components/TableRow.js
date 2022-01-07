@@ -40,13 +40,14 @@ function TableRow(props) {
 				let coinObj = res.data.USD;
 				setPresentCoinPrice((prevCoinPrice) => coinObj);
 				// ChartStore => newElement{presentDate, present Price}
-				console.log("COINZ", res.data);
-				console.log("chart-state:", ChartStore);
+				console.log("Coin data", res.data);
+
 				setChartStore({
 					date: presentDate,
 					coin: props.elem.coin,
 					value: (coinObj * props.elem.quantity).toFixed(2),
 				});
+				console.log("Coin-data tranferred to chart-state:", ChartStore);
 			})
 			.catch((err) => console.log(err));
 		cc.priceHistorical(

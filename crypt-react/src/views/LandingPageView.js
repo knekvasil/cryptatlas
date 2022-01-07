@@ -11,12 +11,11 @@ function LandingPage() {
 						<div className="col-lg-8 col-xl-7 col-xxl-6">
 							<div className="my-5 text-center text-xl-start">
 								<h1 className="display-5 fw-bolder text-white mb-2">
-									A Bootstrap 5 template for modern businesses
+									Hi, we're cryptatlas
 								</h1>
 								<p className="lead fw-normal text-white-50 mb-4">
-									Quickly design and customize responsive mobile-first sites
-									with Bootstrap, the world’s most popular front-end open source
-									toolkit!
+									We're building blockchain solutions through distribution of
+									knowledge and technologies.
 								</p>
 								<div className="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
 									<a
@@ -55,40 +54,42 @@ function LandingPage() {
 									<div className="feature bg-primary bg-gradient text-white rounded-3 mb-3">
 										<i className="bi bi-collection"></i>
 									</div>
-									<h2 className="h5">Featured title</h2>
+									<h2 className="h5">Why it matters</h2>
 									<p className="mb-0">
-										Paragraph of text beneath the heading to explain the
-										heading. Here is just a bit more text.
+										We believe it is your basic right to control your money,
+										data and identity.
 									</p>
 								</div>
 								<div className="col mb-5 h-100">
 									<div className="feature bg-primary bg-gradient text-white rounded-3 mb-3">
 										<i className="bi bi-building"></i>
 									</div>
-									<h2 className="h5">Featured title</h2>
+									<h2 className="h5">Who can join</h2>
 									<p className="mb-0">
-										Paragraph of text beneath the heading to explain the
-										heading. Here is just a bit more text.
+										We offer a welcoming environment for the first-time bitcoin
+										user and the seasoned bitcoiner, both of whom can find
+										utility in cryptatlas products.
 									</p>
 								</div>
 								<div className="col mb-5 mb-md-0 h-100">
 									<div className="feature bg-primary bg-gradient text-white rounded-3 mb-3">
 										<i className="bi bi-toggles2"></i>
 									</div>
-									<h2 className="h5">Featured title</h2>
+									<h2 className="h5">How it works</h2>
 									<p className="mb-0">
-										Paragraph of text beneath the heading to explain the
-										heading. Here is just a bit more text.
+										We help customers fund their trading accounts and wallets
+										via traditional payment channels.
 									</p>
 								</div>
 								<div className="col h-100">
 									<div className="feature bg-primary bg-gradient text-white rounded-3 mb-3">
 										<i className="bi bi-cpu"></i>
 									</div>
-									<h2 className="h5">Featured title</h2>
+									<h2 className="h5">Global reach</h2>
 									<p className="mb-0">
-										Paragraph of text beneath the heading to explain the
-										heading. Here is just a bit more text.
+										cryptatlas works with various ecosystem partners around the
+										world to incubate new ventures and build products.
+										ecosystem.
 									</p>
 								</div>
 							</div>
@@ -103,20 +104,21 @@ function LandingPage() {
 						<div className="col-lg-10 col-xl-7">
 							<div className="text-center">
 								<div className="fs-4 mb-4 fst-italic">
-									"Working with Start Bootstrap templates has saved me tons of
-									development time when building new projects! Starting with a
-									Bootstrap template just makes things easier!"
+									"We pride ourselves on being equal parts curious, honest, and
+									passionate. Every day, we're focused on solving complex
+									problems that make our world safer and lay a foundation for
+									the cryptocurrency economy to flourish."
 								</div>
 								<div className="d-flex align-items-center justify-content-center">
 									<img
-										className="rounded-circle me-3"
-										src="https://dummyimage.com/40x40/ced4da/6c757d"
+										className="rounded-circle me-3 tiny"
+										src="https://avatars.githubusercontent.com/u/5942751?v=4"
 										alt="..."
 									/>
 									<div className="fw-bold">
-										Tom Ato
-										<span className="fw-bold text-primary mx-1">/</span> CEO,
-										Cryptatlas
+										Kyle Silverman
+										<span className="fw-bold text-primary mx-1">/</span> Chief
+										Financial Officer
 									</div>
 								</div>
 							</div>

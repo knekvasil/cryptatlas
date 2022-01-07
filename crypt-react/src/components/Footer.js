@@ -73,7 +73,7 @@ function Footer() {
 							<div className="col-md-8 text-xs-center  text-left   my-1">
 								<p className="mt-2  text-muted">
 									{" "}
-									© Copyright 2021 • All Rights Reserved
+									© Copyright 2022 • All Rights Reserved
 								</p>
 							</div>
 							<div className="col-md-4 text-xs-center   text-lg-right   my-1">

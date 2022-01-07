@@ -1,6 +1,7 @@
 // Features.js
 
 import "./Features.css";
+import { Link } from "react-router-dom";
 
 function Features() {
 	return (
@@ -11,13 +12,16 @@ function Features() {
 						<div className="m-4 m-lg-5">
 							<h1 className="display-5 fw-bold">A warm welcome!</h1>
 							<p className="fs-4">
-								Bootstrap utility classes are used to create this jumbotron
-								since the old component has been removed from the framework. Why
-								create custom CSS when you can use utilities?
+								We realize that the current financial system doesn’t provide an
+								equal opportunity for all to thrive. That’s why we know how
+								important it is for cryptocurrency to be made accessible to
+								everyone, everywhere.
 							</p>
-							<a className="btn btn-primary btn-lg" href="#!">
-								Call to action
-							</a>
+							<Link to="/login">
+								<button type="button" className="btn btn-primary">
+									Get started
+								</button>
+							</Link>
 						</div>
 					</div>
 				</div>
@@ -34,8 +38,8 @@ function Features() {
 									</div>
 									<h2 className="fs-4 fw-bold">Fresh new layout</h2>
 									<p className="mb-0">
-										With Bootstrap 5, we've created a fresh new layout for this
-										template!
+										With the new cryptatlas redesign, we've created a fresh new
+										and improved user experience!
 									</p>
 								</div>
 							</div>
@@ -46,10 +50,10 @@ function Features() {
 									<div className="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-4">
 										<i className="bi bi-cloud-download"></i>
 									</div>
-									<h2 className="fs-4 fw-bold">Free to download</h2>
+									<h2 className="fs-4 fw-bold">Free to use</h2>
 									<p className="mb-0">
-										As always, Start Bootstrap has a powerful collectin of free
-										templates.
+										As always, cryptatlas has a powerful collection of free
+										tools.
 									</p>
 								</div>
 							</div>
@@ -60,10 +64,11 @@ function Features() {
 									<div className="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-4">
 										<i className="bi bi-card-heading"></i>
 									</div>
-									<h2 className="fs-4 fw-bold">Jumbotron hero header</h2>
+									<h2 className="fs-4 fw-bold">Asset backed loans</h2>
 									<p className="mb-0">
-										The heroic part of this template is the jumbotron hero
-										header!
+										Because cryptoassets act as collateral for your line of
+										credit, once you pay back your loan, we'll return your
+										assets to you!
 									</p>
 								</div>
 							</div>
@@ -74,11 +79,10 @@ function Features() {
 									<div className="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-4">
 										<i className="bi bi-bootstrap"></i>
 									</div>
-									<h2 className="fs-4 fw-bold">Feature boxes</h2>
-									<p className="mb-0">
-										We've created some custom feature boxes using Bootstrap
-										icons!
-									</p>
+									<h2 className="fs-4 fw-bold">
+										Transparent Data Permissioning
+									</h2>
+									<p className="mb-0">Only share what you want to share!</p>
 								</div>
 							</div>
 						</div>
@@ -104,8 +108,8 @@ function Features() {
 									</div>
 									<h2 className="fs-4 fw-bold">A name you trust</h2>
 									<p className="mb-0">
-										Start Bootstrap has been the leader in free Bootstrap
-										templates since 2013!
+										cryptatlas has been the leader in cryptocurrency payment
+										infrastructure since 2013!
 									</p>
 								</div>
 							</div>
