@@ -126,7 +126,7 @@ function About() {
 							<div className="text-center">
 								<img
 									className="img-fluid rounded-circle mb-4 px-4"
-									src="http://ritwikd.com/assets/img/face.jpg"
+									src="https://avatars.githubusercontent.com/u/2593351?v=4"
 									alt="..."
 								/>
 								<h5 className="fw-bolder">Ritwik Dutta</h5>

@@ -7,10 +7,18 @@ import symbol from "./NavBarAssets/symbol-cryptatlas.png";
 import "./Footer.css";
 
 function Footer() {
+	function scrollTop() {
+		window.scroll({
+			top: 0,
+			left: 0,
+			behavior: "instant",
+		});
+	}
+
 	return (
 		<section className="pt-5 pb-5">
 			<div className="footer ">
-				<div className="     pt-5 pb-5">
+				<div className="pt-5 pb-5">
 					<div className="container">
 						<div className="row  ">
 							<div className="col-xs-6 col-sm-3">
@@ -26,10 +34,14 @@ function Footer() {
 								<h4 className="my-2">Product</h4>
 								<ul className="list-unstyled list-light text-white">
 									<li>
-										<Link to="/pricing">Pricing</Link>
+										<Link onClick={scrollTop} to="/pricing">
+											Pricing
+										</Link>
 									</li>
 									<li>
-										<Link to="/features">Features</Link>
+										<Link onClick={scrollTop} to="/features">
+											Features
+										</Link>
 									</li>
 								</ul>
 							</div>
@@ -38,14 +50,20 @@ function Footer() {
 								<h4 className="my-2">Company</h4>
 								<ul className="list-unstyled list-light">
 									<li>
-										<Link to="/about">About Us</Link>
+										<Link onClick={scrollTop} to="/about">
+											About Us
+										</Link>
 									</li>
 
 									<li>
-										<Link to="/careers">Careers</Link>
+										<Link onClick={scrollTop} to="/careers">
+											Careers
+										</Link>
 									</li>
 									<li>
-										<Link to="/contact">Contact</Link>
+										<Link onClick={scrollTop} to="/contact">
+											Contact
+										</Link>
 									</li>
 								</ul>
 							</div>
