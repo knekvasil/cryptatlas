@@ -34,7 +34,6 @@ function PortfolioModal(props) {
 			img: "",
 		});
 	}
-	console.log("position", Position);
 
 	return (
 		<>

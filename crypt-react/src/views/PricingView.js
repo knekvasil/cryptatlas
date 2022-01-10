@@ -1,5 +1,7 @@
 // ContactView.js
 
+import { Link } from "react-router-dom";
+
 function ContactView() {
 	return (
 		<>
@@ -57,9 +59,15 @@ function ContactView() {
 										</li>
 									</ul>
 									<div className="d-grid">
-										<a className="btn btn-outline-primary" href="#!">
-											Choose plan
-										</a>
+										<Link to="/contact">
+											<button
+												type="button"
+												style={{ width: "100%" }}
+												className="btn btn-outline-primary"
+											>
+												Choose plan
+											</button>
+										</Link>
 									</div>
 								</div>
 							</div>
@@ -111,9 +119,15 @@ function ContactView() {
 										</li>
 									</ul>
 									<div className="d-grid">
-										<a className="btn btn-primary" href="#!">
-											Choose plan
-										</a>
+										<Link to="/contact">
+											<button
+												type="button"
+												style={{ width: "100%" }}
+												className="btn btn-primary"
+											>
+												Choose plan
+											</button>
+										</Link>
 									</div>
 								</div>
 							</div>
@@ -165,9 +179,15 @@ function ContactView() {
 										</li>
 									</ul>
 									<div className="d-grid">
-										<a className="btn btn-outline-primary" href="#!">
-											Choose plan
-										</a>
+										<Link to="/contact">
+											<button
+												type="button"
+												style={{ width: "100%" }}
+												className="btn btn-outline-primary"
+											>
+												Choose plan
+											</button>
+										</Link>
 									</div>
 								</div>
 							</div>

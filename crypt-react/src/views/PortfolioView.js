@@ -71,18 +71,6 @@ function Portfolio() {
 									Add New Position
 								</Button>
 
-								{/* HERE LIES MY BABY RIP */}
-								{/* <select>
-								{CoinList.map((coin) => (
-									<option
-										style={{ backgroundImage: "url(coin.img)" }}
-										value={coin.name}
-									>
-										{coin.name}
-									</option>
-								))}
-							</select> */}
-
 								<PortfolioModal
 									element={CoinList}
 									show={modalShow}
@@ -95,17 +83,20 @@ function Portfolio() {
 						</div>
 					</div>
 				</div>
-				<div className="col-xl-4">
+				{/* THE AMOUNT OF API CALLS IN ORDER TO MAKE A PORTFOLIO VALUE GRAPH
+				ACUTALLY USEFUL IS EXPONENTIAL THE MORE POSITIONS YOU HAVE. THE API 
+				KEY CAN'T HANDLE IT SO GRAPH WILL HAVE TO BE CANNED FOR NOW. */}
+				{/* <div className="col-xl-4">
 					<div className="card mb-4">
 						<div className="card-header">
 							<i className="fas fa-chart-bar me-1"></i>
-							Bar Chart Example
+							Portfolio Chart
 						</div>
 						<div className="card-body">
 							<Chart element={1} />
 						</div>
 					</div>
-				</div>
+				</div> */}
 			</div>
 		</>
 	);

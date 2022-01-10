@@ -16,7 +16,7 @@ function Careers() {
 						</h2>
 
 						<p>
-							We’re always searching for amazing people to join our team. Take a
+							We're always searching for amazing people to join our team. Take a
 							look at our current openings.
 						</p>
 					</div>
@@ -26,7 +26,7 @@ function Careers() {
 							<h3 className="mb-4">Design</h3>
 
 							<a
-								href="career-single.html"
+								href="https://www.indeed.com/jobs?q=cryptatlas&l&vjk=d13fb449d0b687eff"
 								className="card p-0 mb-3 border-0 shadow-sm shadow--on-hover"
 							>
 								<div className="card-body">
@@ -62,7 +62,7 @@ function Careers() {
 							</a>
 
 							<a
-								href="career-single.html"
+								href="https://www.indeed.com/jobs?q=cryptatlas&l&vjk=d13f449di0b687eff"
 								className="card p-0 mb-3 border-0 shadow-sm shadow--on-hover"
 							>
 								<div className="card-body">
@@ -96,7 +96,7 @@ function Careers() {
 								</div>
 							</a>
 							<a
-								href="career-single.html"
+								href="https://www.indeed.com/jobs?q=cryptatlas&l&vjk=d13f449d0sb687eff"
 								className="card p-0 mb-3 border-0 shadow-sm shadow--on-hover"
 							>
 								<div className="card-body">
@@ -134,7 +134,7 @@ function Careers() {
 						<div className="job-list__wrapper mb-6">
 							<h3 className="mb-4">Development</h3>
 							<a
-								href="career-single.html"
+								href="https://www.indeed.com/jobs?q=cryptatlas&l&vjk=d13fh449d0b687eff"
 								className="card p-0 mb-3 border-0 shadow-sm shadow--on-hover"
 							>
 								<div className="card-body">
@@ -169,7 +169,7 @@ function Careers() {
 								</div>
 							</a>
 							<a
-								href="career-single.html"
+								href="https://www.indeed.com/jobs?q=cryptatlas&l&vjk=d143f449d0b687eff"
 								className="card p-0 mb-3 border-0 shadow-sm shadow--on-hover"
 							>
 								<div className="card-body">
@@ -202,7 +202,7 @@ function Careers() {
 								</div>
 							</a>
 							<a
-								href="career-single.html"
+								href="https://www.indeed.com/jobs?q=cryptatlas&l&vjk=d13f4479d0b687eff"
 								className="card p-0 mb-3 border-0 shadow-sm shadow--on-hover"
 							>
 								<div className="card-body">
