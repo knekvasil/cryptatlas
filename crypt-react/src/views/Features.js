@@ -12,13 +12,16 @@ function Features() {
 						<div className="m-4 m-lg-5">
 							<h1 className="display-5 fw-bold">A warm welcome!</h1>
 							<p className="fs-4">
-								We realize that the current financial system doesn’t provide an
-								equal opportunity for all to thrive. That’s why we know how
+								We realize that the current financial system doesn't provide an
+								equal opportunity for all to thrive. That's why we know how
 								important it is for cryptocurrency to be made accessible to
 								everyone, everywhere.
 							</p>
 							<Link to="/login">
-								<button type="button" className="btn btn-primary">
+								<button
+									type="button"
+									className="btn btn-primary btn-lg px-4 me-sm-3"
+								>
 									Get started
 								</button>
 							</Link>

@@ -1,5 +1,7 @@
 // LandingPageView.js
 
+import { Link } from "react-router-dom";
+
 import "./LandingPageView.css";
 
 function LandingPage() {
@@ -18,15 +20,22 @@ function LandingPage() {
 									knowledge and technologies.
 								</p>
 								<div className="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-									<a
-										className="btn btn-primary btn-lg px-4 me-sm-3"
-										href="#features"
-									>
-										Get Started
-									</a>
-									<a className="btn btn-outline-light btn-lg px-4" href="#!">
-										Learn More
-									</a>
+									<Link to="/login">
+										<button
+											type="button"
+											className="btn btn-primary btn-lg px-4 me-sm-3"
+										>
+											Get started
+										</button>
+									</Link>
+									<Link to="/features">
+										<button
+											type="button"
+											className="btn btn-outline-light btn-lg px-4"
+										>
+											Learn More
+										</button>
+									</Link>
 								</div>
 							</div>
 						</div>
