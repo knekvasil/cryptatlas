@@ -24,4 +24,4 @@ Navigating directly to a route: `https://cryptatlas.netlify.com/<route>` will re
 
 ### `.env` is King
 
-The "Add Environmental Variables" section in Netlify is **useless** since it's deployed from the command line and not by importing a repository. This makes everything go through <em>.env</em>. (make sure to change `.env` addresses to local when working locally)
+The "Add Environmental Variables" section in Netlify is **useless** since it's deployed from the command line and not by importing a repository. This makes everything go through `.env`. (make sure to change `.env` addresses to local when working locally)
