@@ -38,7 +38,6 @@ function EditModal(props) {
 	async function handleSubmit(event) {
 		event.preventDefault();
 		await createPositionInApi(Position);
-		console.log(Position);
 	}
 
 	function changeButtonText(text) {

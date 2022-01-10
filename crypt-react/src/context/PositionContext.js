@@ -22,6 +22,7 @@ function PositionProvider({ children }) {
 	async function getAllPositions() {
 		const response = await apiHelper.get("/positions");
 		setPositions(response.data);
+
 		return response;
 	}
 
@@ -35,8 +36,6 @@ function PositionProvider({ children }) {
 	async function createPositionInApi(position) {
 		let { user } = JSON.parse(localStorage.getItem(jwtString));
 		position.userId = user._id;
-
-		console.log("CREATE", position);
 
 		const response = await apiHelper.post("/positions/position", position);
 
@@ -61,6 +60,7 @@ function PositionProvider({ children }) {
 	async function deletePositionInApi(id) {
 		const response = await apiHelper.delete(`/positions/position/${id}`);
 		getAllPositions();
+
 		return response;
 	}
 

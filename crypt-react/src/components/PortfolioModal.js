@@ -84,7 +84,7 @@ function PortfolioModal(props) {
 								value={Position.quantity}
 								onChange={handleChange}
 								name="quantity"
-								className="form-control"
+								className="form-control quant"
 								placeholder="quantity"
 							/>
 						</div>

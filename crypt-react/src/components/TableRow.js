@@ -22,14 +22,15 @@ function TableRow(props) {
 		callRowAPI();
 	}, []);
 
-	const { deletePositionInApi, getAllPositions } = useContext(PositionContext);
+	const { deletePositionInApi, Positions } = useContext(PositionContext);
 	const { ChartStore, setChartStore } = useContext(TableToChartContext);
 
 	async function handlePositionDelete(event) {
 		event.preventDefault();
 		await deletePositionInApi(props.elem._id);
-		console.log("deleteButton pressed");
-		// getAllPositions();
+		if (Positions.length === 0) {
+			console.log("length0");
+		}
 	}
 
 	async function callRowAPI() {
@@ -42,14 +43,12 @@ function TableRow(props) {
 				let coinObj = res.data.USD;
 				setPresentCoinPrice((prevCoinPrice) => coinObj);
 				// ChartStore => newElement{presentDate, present Price}
-				console.log("Coin data", res.data);
 
 				setChartStore({
 					date: presentDate,
 					coin: props.elem.coin,
 					value: (coinObj * props.elem.quantity).toFixed(2),
 				});
-				console.log("Coin-data tranferred to chart-state:", ChartStore);
 			})
 			.catch((err) => console.log(err));
 
@@ -94,20 +93,6 @@ function TableRow(props) {
 				%
 			</td>
 			<td>
-				{/* <button
-					// onClick={handlePostDelete}
-					className="form-control btn btn-primary"
-					style={{ width: "30px", height: "21px" }}
-				>
-					<i
-						className="bi bi-pencil-fill"
-						style={{
-							position: "relative",
-							bottom: "9px",
-							right: "6px",
-						}}
-					></i>
-				</button>{" "} */}
 				<button
 					onClick={handlePositionDelete}
 					className="form-control btn btn-danger"

@@ -23,8 +23,8 @@
 	width: 250px;
 }
 
-.form-control {
-	border: 1px solid #000000;
+.quant {
+	border: 1px solid #000000 !important;
 }
 
 .modal-subtitle {

@@ -22,6 +22,7 @@ function Portfolio() {
 
 	useEffect(() => {
 		callDropdownAPI();
+
 		getAllPositions();
 	}, []);
 
@@ -54,7 +55,7 @@ function Portfolio() {
 								Hello, {user.name}!
 							</h1>
 							<p className="lead mb-0 text-white">
-								Your portfolio is ready to view!
+								Your portfolio is ready to view.
 							</p>
 						</div>
 					</div>
@@ -62,7 +63,7 @@ function Portfolio() {
 			</header>
 
 			<div className="row mt-3">
-				<div className="col-xl-8">
+				<div className="col-xl-9">
 					<div className="card mb-4">
 						<div className="card-header">
 							<div className="card-body-header">

@@ -5,9 +5,11 @@ const Position = require("../models/Position");
 async function getAllPositions(req, res) {
 	const positions = await Position.find().populate("userId");
 	try {
-		if (positions.length === 0) {
-			return res.status(400).json({ message: "Positions not found" });
-		}
+		// WHEN LAST ELEM IS DELETED IT THOWS ERROR AND
+		// STOPS THE REACTAPP.
+		// if (positions.length === 0) {
+		// 	return res.status(400).json({ message: "Positions not found" });
+		// }
 		return res.status(200).json(positions);
 	} catch (error) {
 		return res.status(500).json({ message: "Couldn't retrieve positions" });
