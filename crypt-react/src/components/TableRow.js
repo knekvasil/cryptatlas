@@ -103,7 +103,6 @@ function TableRow(props) {
 						style={{
 							position: "relative",
 							bottom: "9px",
-							right: "6.5px",
 						}}
 					></i>
 				</button>

@@ -7,6 +7,7 @@ async function getAllPositions(req, res) {
 	try {
 		// WHEN LAST ELEM IS DELETED IT THOWS ERROR AND
 		// STOPS THE REACTAPP.
+
 		// if (positions.length === 0) {
 		// 	return res.status(400).json({ message: "Positions not found" });
 		// }
