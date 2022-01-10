@@ -109,7 +109,7 @@ function Contact() {
 
 								<div className="d-grid">
 									<button
-										className="btn btn-primary btn-lg disabled"
+										className="btn btn-primary btn-lg"
 										id="submitButton"
 										type="submit"
 									>
@@ -155,7 +155,7 @@ function Contact() {
 						</div>
 						<div className="h5">Call us</div>
 						<p className="text-muted mb-0">
-							Call us during normal business hours at (555) 892-9403.
+							Call us during normal business hours at (916) 250-5283.
 						</p>
 					</div>
 				</div>

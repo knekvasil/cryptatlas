@@ -11,12 +11,14 @@ import PortfolioModal from "../components/PortfolioModal";
 import CryptTable from "../components/CryptTable";
 
 import { PositionContext } from "../context/PositionContext";
+import { AuthContext } from "../context/AuthContext";
 
 function Portfolio() {
 	const [CoinList, setCoinList] = useState([]);
 	const [modalShow, setModalShow] = useState(false);
 
 	const { getAllPositions } = useContext(PositionContext);
+	const { user } = useContext(AuthContext);
 
 	useEffect(() => {
 		callDropdownAPI();
@@ -44,31 +46,67 @@ function Portfolio() {
 
 	return (
 		<>
-			<h2 className="mt-3">Portfolio</h2>
-			<Button variant="primary" onClick={() => setModalShow(true)}>
-				Add New Position
-			</Button>
+			<header className="bg-custom">
+				<div className="container-xl p-5">
+					<div className="row align-items-center justify-content-between">
+						<div className="col-12 col-md mb-4 mb-md-0">
+							<h1 className="mb-1 display-4 fw-500 text-white">
+								Hello, {user.name}!
+							</h1>
+							<p className="lead mb-0 text-white">
+								Your portfolio is ready to view!
+							</p>
+						</div>
+					</div>
+				</div>
+			</header>
 
-			{/* HERE LIES MY BABY RIP */}
-			{/* <select>
-				{CoinList.map((coin) => (
-					<option
-						style={{ backgroundImage: "url(coin.img)" }}
-						value={coin.name}
-					>
-						{coin.name}
-					</option>
-				))}
-			</select> */}
+			<div className="row mt-3">
+				<div className="col-xl-8">
+					<div className="card mb-4">
+						<div className="card-header">
+							<div className="card-body-header">
+								<h3>Positions</h3>
+								<Button variant="primary" onClick={() => setModalShow(true)}>
+									Add New Position
+								</Button>
 
-			<PortfolioModal
-				element={CoinList}
-				show={modalShow}
-				onHide={() => setModalShow(false)}
-			/>
-			<CryptTable />
+								{/* HERE LIES MY BABY RIP */}
+								{/* <select>
+								{CoinList.map((coin) => (
+									<option
+										style={{ backgroundImage: "url(coin.img)" }}
+										value={coin.name}
+									>
+										{coin.name}
+									</option>
+								))}
+							</select> */}
 
-			<Chart element={1} />
+								<PortfolioModal
+									element={CoinList}
+									show={modalShow}
+									onHide={() => setModalShow(false)}
+								/>
+							</div>
+						</div>
+						<div className="card-body">
+							<CryptTable />
+						</div>
+					</div>
+				</div>
+				<div className="col-xl-4">
+					<div className="card mb-4">
+						<div className="card-header">
+							<i className="fas fa-chart-bar me-1"></i>
+							Bar Chart Example
+						</div>
+						<div className="card-body">
+							<Chart element={1} />
+						</div>
+					</div>
+				</div>
+			</div>
 		</>
 	);
 }

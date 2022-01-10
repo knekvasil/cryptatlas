@@ -6,10 +6,66 @@
 }
 
 .dropdown-toggle {
-	/* color: white !important; */
 	background-color: grey !important;
 }
 
-#text {
-	display: hidden;
+.card-body-header {
+	display: flex;
+	justify-content: space-between;
+	padding: 5px;
+	align-content: stretch;
+}
+
+.col-12 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.mt-3 {
+	margin: 5px !important;
+	justify-content: center;
+}
+
+.bg-custom {
+	background: linear-gradient(270deg, #f09819, #ff512f, #ff2f2f);
+	background-size: 600% 600%;
+
+	-webkit-animation: AnimationName 26s ease infinite;
+	-moz-animation: AnimationName 26s ease infinite;
+	animation: AnimationName 26s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+	0% {
+		background-position: 0% 11%;
+	}
+	50% {
+		background-position: 100% 90%;
+	}
+	100% {
+		background-position: 0% 11%;
+	}
+}
+@-moz-keyframes AnimationName {
+	0% {
+		background-position: 0% 11%;
+	}
+	50% {
+		background-position: 100% 90%;
+	}
+	100% {
+		background-position: 0% 11%;
+	}
+}
+@keyframes AnimationName {
+	0% {
+		background-position: 0% 11%;
+	}
+	50% {
+		background-position: 100% 90%;
+	}
+	100% {
+		background-position: 0% 11%;
+	}
 }

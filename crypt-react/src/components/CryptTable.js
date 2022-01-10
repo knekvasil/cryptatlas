@@ -12,7 +12,6 @@ function CryptTable() {
 	const { user } = useContext(AuthContext);
 	return (
 		<>
-			<h3>Positions</h3>
 			<Table responsive="sm">
 				<thead>
 					<tr>
