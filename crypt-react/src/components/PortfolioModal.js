@@ -9,13 +9,14 @@ import "react-datepicker/dist/react-datepicker.css";
 import { AuthContext } from "../context/AuthContext";
 
 import { PositionContext } from "../context/PositionContext";
+import { ModalButtonContext } from "../context/ModalButtonContext";
 
 function PortfolioModal(props) {
 	const { Position, setPosition, createPositionInApi } =
 		useContext(PositionContext);
 
-	const [buttonText, setButtonText] = useState("Choose Coin");
-	const [startDate, setStartDate] = useState(new Date());
+	const { ModalButtonText, setModalButtonText } =
+		useContext(ModalButtonContext);
 
 	function handleChange(event) {
 		setPosition({
@@ -27,18 +28,13 @@ function PortfolioModal(props) {
 	async function handleSubmit(event) {
 		event.preventDefault();
 		await createPositionInApi(Position);
-	}
 
-	function changeButtonText(text) {
-		setButtonText(text);
+		setModalButtonText({
+			text: "Choose Coin",
+			img: "",
+		});
 	}
-
-	function handleDateSelect() {}
-
-	function handleDateChange() {
-		setStartDate(startDate);
-		handleChange;
-	}
+	console.log("position", Position);
 
 	return (
 		<>
@@ -56,61 +52,42 @@ function PortfolioModal(props) {
 				<Modal.Body>
 					<form>
 						<div className="form-row">
-							{/* <Dropdown className="dropdown-button">
+							<h6>Coin Name:</h6>
+							<Dropdown className="dropdown-button">
 								<Dropdown.Toggle id="dropdown-autoclose-true">
-									{buttonText}
+									{ModalButtonText.img.length > 0 && (
+										<img
+											src={ModalButtonText.img}
+											alt="coinImg"
+											width="25"
+											height="25"
+										/>
+									)}{" "}
+									{ModalButtonText.text}
 								</Dropdown.Toggle>
-
 								<Dropdown.Menu>
 									{props.element.map((coinObj) => (
-										<>
-											<CryptDropdown
-												name="coin"
-												value={Position.coin}
-												onSelect={() => console.log("TEST")}
-												key={coinObj.name}
-												object={coinObj}
-											/>
-										</>
+										<CryptDropdown key={coinObj.name} object={coinObj} />
 									))}
 								</Dropdown.Menu>
-							</Dropdown> */}
-
-							<select onChange={handleChange} name="coin">
-								{props.element.map((coin, i) => (
-									<option key={i} value={coin.name}>
-										{coin.name}
-									</option>
-								))}
-							</select>
-
-							<div className="col">
-								{/* <DatePicker
-									className="datePicker"
-									value={Position.date}
-									name="date"
-									onSelect={handleDateSelect}
-									onChange={(date) => {
-										setStartDate(date);
-									}}
-								/> */}
-								<input
-									value={Position.date}
-									type="date"
-									name="date"
-									onChange={handleChange}
-								/>
-							</div>
-							<div className="col">
-								<input
-									type="text"
-									value={Position.quantity}
-									onChange={handleChange}
-									name="quantity"
-									className="form-control"
-									placeholder="quantity"
-								/>
-							</div>
+							</Dropdown>
+							<h6 className="modal-subtitle">Purchase Date:</h6>
+							<input
+								className="datePicker"
+								value={Position.date}
+								type="date"
+								name="date"
+								onChange={handleChange}
+							/>
+							<h6 className="modal-subtitle">Quantity Purchased:</h6>
+							<input
+								type="text"
+								value={Position.quantity}
+								onChange={handleChange}
+								name="quantity"
+								className="form-control"
+								placeholder="quantity"
+							/>
 						</div>
 					</form>
 				</Modal.Body>

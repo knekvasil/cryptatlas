@@ -2,12 +2,31 @@
 
 .form-row {
 	display: flex;
+	flex-direction: column;
 }
 
 .datePicker {
 	height: 37px;
+	border: 1px solid #000000;
+	border-radius: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .modal-body {
 	display: flex;
+	justify-content: center;
+}
+
+.datePicker {
+	height: 40px;
+	width: 250px;
+}
+
+.form-control {
+	border: 1px solid #000000;
+}
+
+.modal-subtitle {
+	padding-top: 10px;
 }

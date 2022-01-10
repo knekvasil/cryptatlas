@@ -22,12 +22,14 @@ function TableRow(props) {
 		callRowAPI();
 	}, []);
 
-	const { deletePositionInApi } = useContext(PositionContext);
+	const { deletePositionInApi, getAllPositions } = useContext(PositionContext);
 	const { ChartStore, setChartStore } = useContext(TableToChartContext);
 
 	async function handlePositionDelete(event) {
 		event.preventDefault();
 		await deletePositionInApi(props.elem._id);
+		console.log("deleteButton pressed");
+		// getAllPositions();
 	}
 
 	async function callRowAPI() {
@@ -50,13 +52,13 @@ function TableRow(props) {
 				console.log("Coin-data tranferred to chart-state:", ChartStore);
 			})
 			.catch((err) => console.log(err));
+
 		cc.priceHistorical(
 			props.elem.coin,
 			["USD"],
 			new Date(props.elem.date.substring(0, 10))
 		)
 			.then((price) => {
-				console.log("BTCPRICE,", price);
 				let pastPrice = price.USD;
 				setInitialCoinPrice((prevCoinPrice) => pastPrice);
 				// setChartStore => newElement{past date, pastPrice}
@@ -80,8 +82,8 @@ function TableRow(props) {
 			<td>{props.elem.coin}</td>
 			<td>{props.elem.date.substring(0, 10)}</td>
 			<td>{props.elem.quantity}</td>
-			<td>${InitialCoinPrice}</td>
-			<td>${PresentCoinPrice}</td>
+			<td>${InitialCoinPrice.toFixed(2)}</td>
+			<td>${PresentCoinPrice.toFixed(2)}</td>
 			<td>${(props.elem.quantity * InitialCoinPrice).toFixed(2)}</td>
 			<td>${(props.elem.quantity * PresentCoinPrice).toFixed(2)}</td>
 			<td>

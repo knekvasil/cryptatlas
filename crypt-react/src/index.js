@@ -11,6 +11,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import AuthProvider from "./context/AuthContext";
 import PositionProvider from "./context/PositionContext";
 import TableToChartProvider from "./context/TableToChartContext";
+import ModalButtonProvider from "./context/ModalButtonContext";
 
 ReactDOM.render(
 	<React.StrictMode>
@@ -18,9 +19,11 @@ ReactDOM.render(
 			<NavBarProvider>
 				<PositionProvider>
 					<TableToChartProvider>
-						<BrowserRouter>
-							<App />
-						</BrowserRouter>
+						<ModalButtonProvider>
+							<BrowserRouter>
+								<App />
+							</BrowserRouter>
+						</ModalButtonProvider>
 					</TableToChartProvider>
 				</PositionProvider>
 			</NavBarProvider>

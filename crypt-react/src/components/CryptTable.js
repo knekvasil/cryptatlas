@@ -28,11 +28,7 @@ function CryptTable() {
 				<tbody>
 					{Positions.filter((position) => position.userId._id == user._id).map(
 						(position, i) => {
-							return (
-								<>
-									<TableRow key={i} elem={position} />
-								</>
-							);
+							return <TableRow key={i} elem={position} />;
 						}
 					)}
 				</tbody>
