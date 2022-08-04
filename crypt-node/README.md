@@ -1,4 +1,4 @@
-# cryptatlas
+# cryptatlas backend
 
 ## Deploying crypt-node through Heroku/Docker using an Apple M1
 
