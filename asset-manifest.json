@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/cryptatlas/static/css/main.32f57255.chunk.css",
-    "main.js": "/cryptatlas/static/js/main.0d6723b0.chunk.js",
-    "main.js.map": "/cryptatlas/static/js/main.0d6723b0.chunk.js.map",
-    "runtime-main.js": "/cryptatlas/static/js/runtime-main.e07449a9.js",
-    "runtime-main.js.map": "/cryptatlas/static/js/runtime-main.e07449a9.js.map",
-    "static/css/2.0a9ec390.chunk.css": "/cryptatlas/static/css/2.0a9ec390.chunk.css",
-    "static/js/2.938473da.chunk.js": "/cryptatlas/static/js/2.938473da.chunk.js",
-    "static/js/2.938473da.chunk.js.map": "/cryptatlas/static/js/2.938473da.chunk.js.map",
-    "static/js/3.75ec7002.chunk.js": "/cryptatlas/static/js/3.75ec7002.chunk.js",
-    "static/js/3.75ec7002.chunk.js.map": "/cryptatlas/static/js/3.75ec7002.chunk.js.map",
-    "index.html": "/cryptatlas/index.html",
-    "static/css/2.0a9ec390.chunk.css.map": "/cryptatlas/static/css/2.0a9ec390.chunk.css.map",
-    "static/css/main.32f57255.chunk.css.map": "/cryptatlas/static/css/main.32f57255.chunk.css.map",
-    "static/js/2.938473da.chunk.js.LICENSE.txt": "/cryptatlas/static/js/2.938473da.chunk.js.LICENSE.txt",
-    "static/media/logo-cryptatlas.7a1941a0.png": "/cryptatlas/static/media/logo-cryptatlas.7a1941a0.png"
+    "main.css": "/static/css/main.7a032b7b.chunk.css",
+    "main.js": "/static/js/main.05b2f3c0.chunk.js",
+    "main.js.map": "/static/js/main.05b2f3c0.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d6e12861.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d6e12861.js.map",
+    "static/css/2.452202d3.chunk.css": "/static/css/2.452202d3.chunk.css",
+    "static/js/2.34279554.chunk.js": "/static/js/2.34279554.chunk.js",
+    "static/js/2.34279554.chunk.js.map": "/static/js/2.34279554.chunk.js.map",
+    "static/js/3.4f3cc566.chunk.js": "/static/js/3.4f3cc566.chunk.js",
+    "static/js/3.4f3cc566.chunk.js.map": "/static/js/3.4f3cc566.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.452202d3.chunk.css.map": "/static/css/2.452202d3.chunk.css.map",
+    "static/css/main.7a032b7b.chunk.css.map": "/static/css/main.7a032b7b.chunk.css.map",
+    "static/js/2.34279554.chunk.js.LICENSE.txt": "/static/js/2.34279554.chunk.js.LICENSE.txt",
+    "static/media/logo-cryptatlas.7a1941a0.png": "/static/media/logo-cryptatlas.7a1941a0.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.e07449a9.js",
-    "static/css/2.0a9ec390.chunk.css",
-    "static/js/2.938473da.chunk.js",
-    "static/css/main.32f57255.chunk.css",
-    "static/js/main.0d6723b0.chunk.js"
+    "static/js/runtime-main.d6e12861.js",
+    "static/css/2.452202d3.chunk.css",
+    "static/js/2.34279554.chunk.js",
+    "static/css/main.7a032b7b.chunk.css",
+    "static/js/main.05b2f3c0.chunk.js"
   ]
 }
