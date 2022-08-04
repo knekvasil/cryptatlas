@@ -1,5 +1,3 @@
 # cryptatlas
 
-Deployment was a nightmare.
-
-Hosted at https://cryptatlas.netlify.app/
+Hosted at https://cryptatlas.kajnekvasil.com/
