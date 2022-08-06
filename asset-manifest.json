@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.7a032b7b.chunk.css",
-    "main.js": "/static/js/main.05b2f3c0.chunk.js",
-    "main.js.map": "/static/js/main.05b2f3c0.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.d6e12861.js",
-    "runtime-main.js.map": "/static/js/runtime-main.d6e12861.js.map",
-    "static/css/2.452202d3.chunk.css": "/static/css/2.452202d3.chunk.css",
-    "static/js/2.34279554.chunk.js": "/static/js/2.34279554.chunk.js",
-    "static/js/2.34279554.chunk.js.map": "/static/js/2.34279554.chunk.js.map",
-    "static/js/3.4f3cc566.chunk.js": "/static/js/3.4f3cc566.chunk.js",
-    "static/js/3.4f3cc566.chunk.js.map": "/static/js/3.4f3cc566.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.452202d3.chunk.css.map": "/static/css/2.452202d3.chunk.css.map",
-    "static/css/main.7a032b7b.chunk.css.map": "/static/css/main.7a032b7b.chunk.css.map",
-    "static/js/2.34279554.chunk.js.LICENSE.txt": "/static/js/2.34279554.chunk.js.LICENSE.txt",
-    "static/media/logo-cryptatlas.7a1941a0.png": "/static/media/logo-cryptatlas.7a1941a0.png"
+    "main.css": "https://cryptatlas.kajnekvasil.com/static/css/main.7a032b7b.chunk.css",
+    "main.js": "https://cryptatlas.kajnekvasil.com/static/js/main.d7a13aeb.chunk.js",
+    "main.js.map": "https://cryptatlas.kajnekvasil.com/static/js/main.d7a13aeb.chunk.js.map",
+    "runtime-main.js": "https://cryptatlas.kajnekvasil.com/static/js/runtime-main.cc418e4e.js",
+    "runtime-main.js.map": "https://cryptatlas.kajnekvasil.com/static/js/runtime-main.cc418e4e.js.map",
+    "static/css/2.452202d3.chunk.css": "https://cryptatlas.kajnekvasil.com/static/css/2.452202d3.chunk.css",
+    "static/js/2.34279554.chunk.js": "https://cryptatlas.kajnekvasil.com/static/js/2.34279554.chunk.js",
+    "static/js/2.34279554.chunk.js.map": "https://cryptatlas.kajnekvasil.com/static/js/2.34279554.chunk.js.map",
+    "static/js/3.4f3cc566.chunk.js": "https://cryptatlas.kajnekvasil.com/static/js/3.4f3cc566.chunk.js",
+    "static/js/3.4f3cc566.chunk.js.map": "https://cryptatlas.kajnekvasil.com/static/js/3.4f3cc566.chunk.js.map",
+    "index.html": "https://cryptatlas.kajnekvasil.com/index.html",
+    "static/css/2.452202d3.chunk.css.map": "https://cryptatlas.kajnekvasil.com/static/css/2.452202d3.chunk.css.map",
+    "static/css/main.7a032b7b.chunk.css.map": "https://cryptatlas.kajnekvasil.com/static/css/main.7a032b7b.chunk.css.map",
+    "static/js/2.34279554.chunk.js.LICENSE.txt": "https://cryptatlas.kajnekvasil.com/static/js/2.34279554.chunk.js.LICENSE.txt",
+    "static/media/logo-cryptatlas.7a1941a0.png": "https://cryptatlas.kajnekvasil.com/static/media/logo-cryptatlas.7a1941a0.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.d6e12861.js",
+    "static/js/runtime-main.cc418e4e.js",
     "static/css/2.452202d3.chunk.css",
     "static/js/2.34279554.chunk.js",
     "static/css/main.7a032b7b.chunk.css",
-    "static/js/main.05b2f3c0.chunk.js"
+    "static/js/main.d7a13aeb.chunk.js"
   ]
 }
