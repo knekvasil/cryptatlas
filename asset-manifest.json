@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "https://cryptatlas.kajnekvasil.com/static/css/main.7a032b7b.chunk.css",
-    "main.js": "https://cryptatlas.kajnekvasil.com/static/js/main.d7a13aeb.chunk.js",
-    "main.js.map": "https://cryptatlas.kajnekvasil.com/static/js/main.d7a13aeb.chunk.js.map",
+    "main.js": "https://cryptatlas.kajnekvasil.com/static/js/main.82fa4e05.chunk.js",
+    "main.js.map": "https://cryptatlas.kajnekvasil.com/static/js/main.82fa4e05.chunk.js.map",
     "runtime-main.js": "https://cryptatlas.kajnekvasil.com/static/js/runtime-main.cc418e4e.js",
     "runtime-main.js.map": "https://cryptatlas.kajnekvasil.com/static/js/runtime-main.cc418e4e.js.map",
     "static/css/2.452202d3.chunk.css": "https://cryptatlas.kajnekvasil.com/static/css/2.452202d3.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.452202d3.chunk.css",
     "static/js/2.34279554.chunk.js",
     "static/css/main.7a032b7b.chunk.css",
-    "static/js/main.d7a13aeb.chunk.js"
+    "static/js/main.82fa4e05.chunk.js"
   ]
 }
